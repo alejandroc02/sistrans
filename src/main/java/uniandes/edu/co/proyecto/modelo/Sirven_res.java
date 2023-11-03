@@ -15,7 +15,7 @@ public class Sirven_res {
         ;
     }
 
-    public Sirven_res(Restaurantes restaurantes_id, ProductosRestaurante productosRestaurante_id) {
+    public Sirven_res(Restaurantes restaurantes_id, ProductosRes productosRestaurante_id) {
         this.pk = new Sirven_resPK(restaurantes_id, productosRestaurante_id);
     }
 

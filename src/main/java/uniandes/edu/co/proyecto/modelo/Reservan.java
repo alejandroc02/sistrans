@@ -15,8 +15,8 @@ public class Reservan {
 
     private Date fecha_salida;
 
-    public Reservan(Habitaciones Habitaciones_id, Reservas Reservas_id, Date fecha_salida) {
-        this.pk = new ReservanPK(Reservas_id, Habitaciones_id);
+    public Reservan(Habitacion Habitacion_id, Reservas Reservas_id, Date fecha_salida) {
+        this.pk = new ReservanPK(Reservas_id, Habitacion_id);
         this.fecha_salida = fecha_salida;
     }
 

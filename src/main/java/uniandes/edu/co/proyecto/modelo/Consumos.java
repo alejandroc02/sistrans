@@ -22,8 +22,8 @@ public class Consumos {
         ;
     }
 
-    public Consumos(Habitaciones Habitaciones_id, TiposServicio TiposServicio_tipo, String descripcion, Double costo) {
-        this.pk = new ConsumosPK(Habitaciones_id, TiposServicio_tipo);
+    public Consumos(Habitacion Habitacion_id, Servicios Servicios_tipo, String descripcion, Double costo) {
+        this.pk = new ConsumosPK(Habitacion_id, Servicios_tipo);
         this.descripcion = descripcion;
         this.costo = costo;
     }

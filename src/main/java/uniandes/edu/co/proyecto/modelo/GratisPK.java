@@ -7,31 +7,31 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Embeddable
-public class PrestanGratisPK implements Serializable {
+public class GratisPK implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "SalonesConferencia_id", referencedColumnName = "id")
-    private SalonesConferencia SalonesConferencia_id;
+    private Conferencia SalonesConferencia_id;
     
     @ManyToOne
     @JoinColumn(name = "Equipos_id", referencedColumnName = "id")
     private Equipos Equipos_id;
 
-    public PrestanGratisPK() {
+    public GratisPK() {
         super();
     }
 
-    public PrestanGratisPK(SalonesConferencia salonesConferencia_id, Equipos equipos_id) {
+    public GratisPK(Conferencia salonesConferencia_id, Equipos equipos_id) {
         super();
         SalonesConferencia_id = salonesConferencia_id;
         Equipos_id = equipos_id;
     }
 
-    public SalonesConferencia getSalonesConferencia_id() {
+    public Conferencia getSalonesConferencia_id() {
         return SalonesConferencia_id;
     }
 
-    public void setSalonesConferencia_id(SalonesConferencia salonesConferencia_id) {
+    public void setSalonesConferencia_id(Conferencia salonesConferencia_id) {
         SalonesConferencia_id = salonesConferencia_id;
     }
 

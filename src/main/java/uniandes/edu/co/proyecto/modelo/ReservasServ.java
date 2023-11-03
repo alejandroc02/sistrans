@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "reservasServicio")
-public class ReservasServicio {
+public class ReservasServ {
     @Id
     private int id;
 
@@ -19,18 +19,18 @@ public class ReservasServicio {
     private String hora;
     @ManyToOne
     @JoinColumn(name = "habitaciones_id", referencedColumnName = "id")
-    private Habitaciones Habitaciones_id;
+    private Habitacion Habitacion_id;
 
-    public ReservasServicio() {
+    public ReservasServ() {
         ;
     }
 
-    public ReservasServicio(int id, int duracion_hora, Date dia, String hora, Habitaciones habitaciones_id) {
+    public ReservasServ(int id, int duracion_hora, Date dia, String hora, Habitacion habitacion_id) {
         this.id = id;
         this.duracion_hora = duracion_hora;
         this.dia = dia;
         this.hora = hora;
-        Habitaciones_id = habitaciones_id;
+        Habitacion_id = habitacion_id;
     }
 
     public int getId() {
@@ -65,12 +65,12 @@ public class ReservasServicio {
         this.hora = hora;
     }
 
-    public Habitaciones getHabitaciones_id() {
-        return Habitaciones_id;
+    public Habitacion getHabitacion_id() {
+        return Habitacion_id;
     }
 
-    public void setHabitaciones_id(Habitaciones habitaciones_id) {
-        Habitaciones_id = habitaciones_id;
+    public void setHabitaciones_id(Habitacion habitacion_id) {
+        Habitacion_id = habitacion_id;
     }
 
     

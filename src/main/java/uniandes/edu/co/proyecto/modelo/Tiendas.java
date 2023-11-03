@@ -14,8 +14,8 @@ public class Tiendas {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "TiposServicio_tipo", referencedColumnName = "tipo")
-    private TiposServicio TiposServicio_tipo; 
+    @JoinColumn(name = "Servicios_tipo", referencedColumnName = "tipo")
+    private Servicios Servicios_tipo; 
 
     private String tipo_tienda;
 
@@ -23,9 +23,9 @@ public class Tiendas {
         ;
     }
 
-    public Tiendas(int id, TiposServicio tiposServicio_tipo, String tipo_tienda) {
+    public Tiendas(int id, Servicios servicios_tipo, String tipo_tienda) {
         this.id = id;
-        TiposServicio_tipo = tiposServicio_tipo;
+        Servicios_tipo = servicios_tipo;
         this.tipo_tienda = tipo_tienda;
     }
 
@@ -37,12 +37,12 @@ public class Tiendas {
         this.id = id;
     }
 
-    public TiposServicio getTiposServicio_tipo() {
-        return TiposServicio_tipo;
+    public Servicios getTiposServicio_tipo() {
+        return Servicios_tipo;
     }
 
-    public void setTiposServicio_tipo(TiposServicio tiposServicio_tipo) {
-        TiposServicio_tipo = tiposServicio_tipo;
+    public void setTiposServicio_tipo(Servicios servicios_tipo) {
+        Servicios_tipo = servicios_tipo;
     }
 
     public String getTipo_tienda() {

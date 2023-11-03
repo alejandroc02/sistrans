@@ -15,12 +15,12 @@ public class CheckOutsPK implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "Habitaciones_id", referencedColumnName = "id")
-    private Habitaciones Habitaciones_id;
+    private Habitacion Habitacion_id;
 
-    public CheckOutsPK(Reservas reservas_id, Habitaciones habitaciones_id) {
+    public CheckOutsPK(Reservas reservas_id, Habitacion habitacion_id) {
         super();
         Reservas_id = reservas_id;
-        Habitaciones_id = habitaciones_id;
+        Habitacion_id = habitacion_id;
     }
     
     public CheckOutsPK() {
@@ -35,12 +35,12 @@ public class CheckOutsPK implements Serializable {
         Reservas_id = reservas_id;
     }
 
-    public Habitaciones getHabitaciones_id() {
-        return Habitaciones_id;
+    public Habitacion getHabitacion_id() {
+        return Habitacion_id;
     }
 
-    public void setHabitaciones_id(Habitaciones habitaciones_id) {
-        Habitaciones_id = habitaciones_id;
+    public void setHabitacion_id(Habitacion habitacion_id) {
+        Habitacion_id = habitacion_id;
     }
 
     

@@ -14,8 +14,8 @@ public class Spas {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "TiposServicio_tipo", referencedColumnName = "tipo")
-    private TiposServicio TiposServicio_tipo;
+    @JoinColumn(name = "Servicios_tipo", referencedColumnName = "tipo")
+    private Servicios Servicios_tipo;
 
     private int capacidad;
 
@@ -23,9 +23,9 @@ public class Spas {
         ;
     }
 
-    public Spas(int id, TiposServicio tiposServicio_tipo, int capacidad) {
+    public Spas(int id, Servicios servicios_tipo, int capacidad) {
         this.id = id;
-        TiposServicio_tipo = tiposServicio_tipo;
+        Servicios_tipo = servicios_tipo;
         this.capacidad = capacidad;
     }
 
@@ -37,12 +37,12 @@ public class Spas {
         this.id = id;
     }
 
-    public TiposServicio getTiposServicio_tipo() {
-        return TiposServicio_tipo;
+    public Servicios getServicios_tipo() {
+        return Servicios_tipo;
     }
 
-    public void setTiposServicio_tipo(TiposServicio tiposServicio_tipo) {
-        TiposServicio_tipo = tiposServicio_tipo;
+    public void setTiposServicio_tipo(Servicios servicios_tipo) {
+        Servicios_tipo= servicios_tipo;
     }
 
     public int getCapacidad() {

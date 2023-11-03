@@ -7,28 +7,28 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "servicioslavanderia")
-public class ServiciosLavanderia {
+@Table(name = "lavanderia")
+public class Lavanderia {
 
     @Id
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "TiposServicio_tipo", referencedColumnName = "tipo")
-    private TiposServicio TiposServicio_tipo;
+    @JoinColumn(name = "Servicios_tipo", referencedColumnName = "tipo")
+    private Servicios Servicios_tipo;
 
     private String tipo_prenda;
     private int cantidad_prendas;
     private double costo;
 
-    public ServiciosLavanderia() {
+    public Lavanderia() {
         ;
     }
 
-    public ServiciosLavanderia(int id, TiposServicio tiposServicio_tipo, String tipo_prenda, int cantidad_prendas,
+    public Lavanderia(int id, Servicios servicios_tipo, String tipo_prenda, int cantidad_prendas,
             double costo) {
         this.id = id;
-        TiposServicio_tipo = tiposServicio_tipo;
+        Servicios_tipo = servicios_tipo;
         this.tipo_prenda = tipo_prenda;
         this.cantidad_prendas = cantidad_prendas;
         this.costo = costo;
@@ -42,12 +42,12 @@ public class ServiciosLavanderia {
         this.id = id;
     }
 
-    public TiposServicio getTiposServicio_tipo() {
-        return TiposServicio_tipo;
+    public Servicios getServiciostipo() {
+        return Servicios_tipo;
     }
 
-    public void setTiposServicio_tipo(TiposServicio tiposServicio_tipo) {
-        TiposServicio_tipo = tiposServicio_tipo;
+    public void setTiposServicio_tipo(Servicios servicios_tipo) {
+        Servicios_tipo = servicios_tipo;
     }
 
     public String getTipo_prenda() {

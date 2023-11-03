@@ -5,18 +5,18 @@ import java.io.Serializable;
 import jakarta.persistence.Embeddable;
 
 @Embeddable
-public class InformacionClientesPK implements Serializable {
+public class ClientesPK implements Serializable {
 
     private String tipo_documento;
     private int num_documento;
 
-    public InformacionClientesPK(String tipo_documento, int num_documento) {
+    public ClientesPK(String tipo_documento, int num_documento) {
         super();
         this.tipo_documento = tipo_documento;
         this.num_documento = num_documento;
     }
 
-    public InformacionClientesPK() {
+    public ClientesPK() {
         super();
     }
 
