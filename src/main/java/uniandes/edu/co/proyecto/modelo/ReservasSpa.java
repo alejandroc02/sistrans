@@ -15,7 +15,7 @@ public class ReservasSpa {
         ;
     }
 
-    public ReservasSpa(Spas spas_id, ReservasServicio reservasServicio_id) {
+    public ReservasSpa(Spas spas_id, ReservasServ reservasServicio_id) {
         this.pk = new ReservasSpaPK(spas_id, reservasServicio_id);
     }
 

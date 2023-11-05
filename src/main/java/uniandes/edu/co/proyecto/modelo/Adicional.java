@@ -5,28 +5,28 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "prestanadicional")
-public class PrestanAdicional {
+@Table(name = "adicional")
+public class Adicional {
 
     @EmbeddedId
-    private PrestanAdicionalPK pk;
+    private AdicionalPK pk;
 
     private double costo;
 
-    public PrestanAdicional() {
+    public Adicional() {
         ;
     }
 
-    public PrestanAdicional(SalonesReunion salonesReunion_id, Equipos equipos_id, double costo) {
-        this.pk = new PrestanAdicionalPK(salonesReunion_id, equipos_id);
+    public Adicional(Reunion salonesReunion_id, Equipos equipos_id, double costo) {
+        this.pk = new AdicionalPK(salonesReunion_id, equipos_id);
         this.costo = costo;
     }
 
-    public PrestanAdicionalPK getPk() {
+    public AdicionalPK getPk() {
         return pk;
     }
 
-    public void setPk(PrestanAdicionalPK pk) {
+    public void setPk(AdicionalPK pk) {
         this.pk = pk;
     }
 

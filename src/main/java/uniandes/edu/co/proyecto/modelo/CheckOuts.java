@@ -15,8 +15,8 @@ public class CheckOuts {
 
     private Date fecha_salida;
 
-    public CheckOuts(Reservas Reservas_id, Habitaciones Habitaciones_id, Date fecha_salida) {
-        this.pk = new CheckOutsPK(Reservas_id, Habitaciones_id);
+    public CheckOuts(Reservas Reservas_id, Habitacion Habitacion_id, Date fecha_salida) {
+        this.pk = new CheckOutsPK(Reservas_id, Habitacion_id);
         this.fecha_salida = fecha_salida;
     }
 

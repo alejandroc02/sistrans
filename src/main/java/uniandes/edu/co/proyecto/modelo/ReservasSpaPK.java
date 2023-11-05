@@ -15,13 +15,13 @@ public class ReservasSpaPK implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "ReservasServicio_id", referencedColumnName = "id")
-    private ReservasServicio ReservasServicio_id;
+    private ReservasServ ReservasServicio_id;
 
     public ReservasSpaPK() {
         super();
     }
 
-    public ReservasSpaPK(Spas spas_id, ReservasServicio reservasServicio_id) {
+    public ReservasSpaPK(Spas spas_id, ReservasServ reservasServicio_id) {
         super();
         Spas_id = spas_id;
         ReservasServicio_id = reservasServicio_id;
@@ -35,11 +35,11 @@ public class ReservasSpaPK implements Serializable {
         Spas_id = spas_id;
     }
 
-    public ReservasServicio getReservasServicio_id() {
+    public ReservasServ getReservasServicio_id() {
         return ReservasServicio_id;
     }
 
-    public void setReservasServicio_id(ReservasServicio reservasServicio_id) {
+    public void setReservasServicio_id(ReservasServ reservasServicio_id) {
         ReservasServicio_id = reservasServicio_id;
     }
 

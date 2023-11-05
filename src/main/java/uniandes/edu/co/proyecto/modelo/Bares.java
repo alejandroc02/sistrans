@@ -1,5 +1,4 @@
 package uniandes.edu.co.proyecto.modelo;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -14,8 +13,8 @@ public class Bares {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "TiposServicio_tipo", referencedColumnName = "tipo")
-    private TiposServicio TiposServicio_tipo;
+    @JoinColumn(name = "Servicios_tipo", referencedColumnName = "tipo")
+    private Servicios Servicios_tipo;
 
     private int capacidad;
     private String estilo;
@@ -24,9 +23,9 @@ public class Bares {
         ;
     }
 
-    public Bares(int id, TiposServicio tiposServicio_tipo, int capacidad, String estilo) {
+    public Bares(int id, Servicios servicios_tipo, int capacidad, String estilo) {
         this.id = id;
-        TiposServicio_tipo = tiposServicio_tipo;
+        Servicios_tipo = servicios_tipo;
         this.capacidad = capacidad;
         this.estilo = estilo;
     }
@@ -39,12 +38,12 @@ public class Bares {
         this.id = id;
     }
 
-    public TiposServicio getTiposServicio_tipo() {
-        return TiposServicio_tipo;
+    public Servicios getServicios_tipo() {
+        return Servicios_tipo;
     }
 
-    public void setTiposServicio_tipo(TiposServicio tiposServicio_tipo) {
-        TiposServicio_tipo = tiposServicio_tipo;
+    public void setServicios_tipo(Servicios servicios_tipo) {
+        Servicios_tipo = servicios_tipo;
     }
 
     public int getCapacidad() {

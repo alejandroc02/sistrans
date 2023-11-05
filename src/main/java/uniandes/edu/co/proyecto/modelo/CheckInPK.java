@@ -19,13 +19,13 @@ public class CheckInPK implements Serializable {
             @JoinColumn(name = "Usuarios_tipo_documento", referencedColumnName = "tipo_documento"),
             @JoinColumn(name = "Usuarios_num_documento", referencedColumnName = "num_documento"),
     })
-    private InformacionClientes informacionClientesPK;
+    private Clientes informacionClientesPK;
 
     public CheckInPK() { 
         super();
     }
 
-    public CheckInPK(Reservas reservas_id, InformacionClientes informacionClientesPK) {
+    public CheckInPK(Reservas reservas_id, Clientes informacionClientesPK) {
         super();
         this.Reservas_id = reservas_id;
         this.informacionClientesPK = informacionClientesPK;
@@ -39,11 +39,11 @@ public class CheckInPK implements Serializable {
         Reservas_id = reservas_id;
     }
 
-    public InformacionClientes getInformacionClientesPK() {
+    public Clientes getInformacionClientesPK() {
         return informacionClientesPK;
     }
 
-    public void setInformacionClientesPK(InformacionClientes informacionClientesPK) {
+    public void setInformacionClientesPK(Clientes informacionClientesPK) {
         this.informacionClientesPK = informacionClientesPK;
     } 
 

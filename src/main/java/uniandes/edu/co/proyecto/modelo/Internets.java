@@ -14,8 +14,8 @@ public class Internets {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "TiposServicio_tipo", referencedColumnName = "tipo")
-    private TiposServicio TiposServicio_tipo;
+    @JoinColumn(name = "Servicios_tipo", referencedColumnName = "tipo")
+    private Servicios Servicios_tipo;
 
     private int capacidad;
     private double costo_dia;
@@ -24,9 +24,9 @@ public class Internets {
         ;
     }
 
-    public Internets(int id, TiposServicio tiposServicio_tipo, int capacidad, double costo_dia) {
+    public Internets(int id, Servicios servicios_tipo, int capacidad, double costo_dia) {
         this.id = id;
-        TiposServicio_tipo = tiposServicio_tipo;
+        Servicios_tipo = servicios_tipo;
         this.capacidad = capacidad;
         this.costo_dia = costo_dia;
     }
@@ -39,12 +39,12 @@ public class Internets {
         this.id = id;
     }
 
-    public TiposServicio getTiposServicio_tipo() {
-        return TiposServicio_tipo;
+    public Servicios getServicios_tipo() {
+        return Servicios_tipo;
     }
 
-    public void setTiposServicio_tipo(TiposServicio tiposServicio_tipo) {
-        TiposServicio_tipo = tiposServicio_tipo;
+    public void setTiposServicio_tipo(Servicios servicios_tipo) {
+        Servicios_tipo = servicios_tipo;
     }
 
     public int getCapacidad() {

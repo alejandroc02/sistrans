@@ -15,13 +15,13 @@ public class Sirven_resPK implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "ProductosRestaurante_id", referencedColumnName = "id")
-    private ProductosRestaurante ProductosRestaurante_id;
+    private ProductosRes ProductosRestaurante_id;
 
     public Sirven_resPK() {
         super();
     }
 
-    public Sirven_resPK(Restaurantes restaurantes_id, ProductosRestaurante productosRestaurante_id) {
+    public Sirven_resPK(Restaurantes restaurantes_id, ProductosRes productosRestaurante_id) {
         super();
         Restaurantes_id = restaurantes_id;
         ProductosRestaurante_id = productosRestaurante_id;
@@ -35,11 +35,11 @@ public class Sirven_resPK implements Serializable {
         Restaurantes_id = restaurantes_id;
     }
 
-    public ProductosRestaurante getProductosRestaurante_id() {
+    public ProductosRes getProductosRestaurante_id() {
         return ProductosRestaurante_id;
     }
 
-    public void setProductosRestaurante_id(ProductosRestaurante productosRestaurante_id) {
+    public void setProductosRestaurante_id(ProductosRes productosRestaurante_id) {
         ProductosRestaurante_id = productosRestaurante_id;
     }
 

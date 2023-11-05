@@ -5,25 +5,25 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "vendentienda")
+@Table(name = "vendent")
 public class VendenT {
 
     @EmbeddedId
-    private VendenTiendaPK pk;
+    private VendenTPK pk;
 
     public VendenT() {
         ;
     }
 
-    public VendenT(Tiendas tiendas_id, ProductosTienda productosTienda_id) {
-        this.pk = new VendenTiendaPK(tiendas_id, productosTienda_id);
+    public VendenT(Tiendas tiendas_id, ProductosT productosTienda_id) {
+        this.pk = new VendenTPK(tiendas_id, productosTienda_id);
     }
 
-    public VendenTiendaPK getPk() {
+    public VendenTPK getPk() {
         return pk;
     }
 
-    public void setPk(VendenTiendaPK pk) {
+    public void setPk(VendenTPK pk) {
         this.pk = pk;
     }
     

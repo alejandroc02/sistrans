@@ -7,7 +7,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Embeddable
-public class VendenTiendaPK implements Serializable {
+public class VendenTPK implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "Tiendas_id", referencedColumnName = "id")
@@ -15,13 +15,13 @@ public class VendenTiendaPK implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "ProductosTienda_id", referencedColumnName = "id")
-    private ProductosTienda ProductosTienda_id;
+    private ProductosT ProductosTienda_id;
 
-    public VendenTiendaPK() {
+    public VendenTPK() {
         super();
     }
 
-    public VendenTiendaPK(Tiendas tiendas_id, ProductosTienda productosTienda_id) {
+    public VendenTPK(Tiendas tiendas_id, ProductosT productosTienda_id) {
         super();
         Tiendas_id = tiendas_id;
         ProductosTienda_id = productosTienda_id;
@@ -35,11 +35,11 @@ public class VendenTiendaPK implements Serializable {
         Tiendas_id = tiendas_id;
     }
 
-    public ProductosTienda getProductosTienda_id() {
+    public ProductosT getProductosTienda_id() {
         return ProductosTienda_id;
     }
 
-    public void setProductosTienda_id(ProductosTienda productosTienda_id) {
+    public void setProductosTienda_id(ProductosT productosTienda_id) {
         ProductosTienda_id = productosTienda_id;
     }
 

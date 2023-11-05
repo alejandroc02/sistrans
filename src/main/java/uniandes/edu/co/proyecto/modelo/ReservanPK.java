@@ -13,12 +13,12 @@ public class ReservanPK {
 
     @ManyToOne
     @JoinColumn(name = "Habitaciones_id", referencedColumnName = "id")
-    private Habitaciones Habitaciones_id;
+    private Habitacion Habitacion_id;
 
-    public ReservanPK(Reservas reservas_id, Habitaciones habitaciones_id) {
+    public ReservanPK(Reservas reservas_id, Habitacion habitacion_id) {
         super();
         Reservas_id = reservas_id;
-        Habitaciones_id = habitaciones_id;
+        Habitacion_id = habitacion_id;
     }
     
     public ReservanPK() {
@@ -33,12 +33,12 @@ public class ReservanPK {
         Reservas_id = reservas_id;
     }
 
-    public Habitaciones getHabitaciones_id() {
-        return Habitaciones_id;
+    public Habitacion getHabitaciones_id() {
+        return Habitacion_id;
     }
 
-    public void setHabitaciones_id(Habitaciones habitaciones_id) {
-        Habitaciones_id = habitaciones_id;
+    public void setHabitaciones_id(Habitacion habitaciones_id) {
+        Habitacion_id = habitaciones_id;
     }
     
 }

@@ -7,39 +7,39 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Embeddable
-public class ReservasSalonConferenciaPK implements Serializable {
+public class ServConferenciaPK implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "ReservasServicio_id", referencedColumnName = "id")
-    private ReservasServicio ReservasServicio_id;
+    private ReservasServ ReservasServicio_id;
     
     @ManyToOne
     @JoinColumn(name = "SalonesConferencia_id", referencedColumnName = "id")
-    private SalonesConferencia SalonesConferencia_id;
+    private Conferencia SalonesConferencia_id;
 
-    public ReservasSalonConferenciaPK() {
+    public ServConferenciaPK() {
         super();
     }
 
-    public ReservasSalonConferenciaPK(ReservasServicio ReservasServico_id, SalonesConferencia SalonesConferencia_id) {
+    public ServConferenciaPK(ReservasServ ReservasServico_id, Conferencia SalonesConferencia_id) {
         super();
         this.ReservasServicio_id = ReservasServico_id;
         this.SalonesConferencia_id = SalonesConferencia_id;
     }
 
-    public ReservasServicio getReservasServicio_id() {
+    public ReservasServ getReservasServicio_id() {
         return ReservasServicio_id;
     }
 
-    public void setReservasServicio_id(ReservasServicio reservasServicio_id) {
+    public void setReservasServicio_id(ReservasServ reservasServicio_id) {
         ReservasServicio_id = reservasServicio_id;
     }
 
-    public SalonesConferencia getSalonesConferencia_id() {
+    public Conferencia getSalonesConferencia_id() {
         return SalonesConferencia_id;
     }
 
-    public void setSalonesConferencia_id(SalonesConferencia salonesConferencia_id) {
+    public void setSalonesConferencia_id(Conferencia salonesConferencia_id) {
         SalonesConferencia_id = salonesConferencia_id;
     }
 

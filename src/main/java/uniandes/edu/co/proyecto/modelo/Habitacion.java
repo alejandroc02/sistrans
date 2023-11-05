@@ -7,8 +7,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "habitaciones")
-public class Habitaciones {
+@Table(name = "habitacion")
+public class Habitacion {
     
     @Id
     private int id;
@@ -20,11 +20,11 @@ public class Habitaciones {
     @JoinColumn(name = "TIPOSHABITACION_TIPO", referencedColumnName = "tipo")
     private TiposHabitacion TiposHabitacion_tipo;
 
-    public Habitaciones() {
+    public Habitacion() {
         ;
     }
 
-    public Habitaciones(int id, int capacidad, double costo, TiposHabitacion tiposHabitacion_tipo) {
+    public Habitacion(int id, int capacidad, double costo, TiposHabitacion tiposHabitacion_tipo) {
         this.id = id;
         this.capacidad = capacidad;
         this.costo = costo;
