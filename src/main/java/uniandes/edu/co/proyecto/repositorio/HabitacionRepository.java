@@ -9,19 +9,19 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import uniandes.edu.co.proyecto.modelo.Habitaciones;
+import uniandes.edu.co.proyecto.modelo.Habitacion;
 import uniandes.edu.co.proyecto.modelo.TiposHabitacion;
 
-public interface HabitacionRepository extends JpaRepository<Habitaciones, Integer>{
+public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>{
     
     //Obtener todas las habitaciones
     @Query(value = "SELECT * FROM HABITACIONES",nativeQuery = true)
-    Collection<Habitaciones> darHabitaciones();
+    Collection<Habitacion> darHabitaciones();
 
 
     //Obtener una habtiacion con id especifico
     @Query(value = "SELECT * FROM HABITACIONES WHERE id=:id",nativeQuery = true)
-    Habitaciones darHabitacion (@Param("id") int id);
+    Habitacion darHabitacion (@Param("id") int id);
 
 
     //insertar Habitacion

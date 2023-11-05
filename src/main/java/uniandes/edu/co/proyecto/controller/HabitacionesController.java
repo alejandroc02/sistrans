@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import uniandes.edu.co.proyecto.modelo.Habitaciones;
+import uniandes.edu.co.proyecto.modelo.Habitacion;
 import uniandes.edu.co.proyecto.repositorio.HabitacionRepository;
 
 public class HabitacionesController {
@@ -24,19 +24,19 @@ public class HabitacionesController {
 
     @GetMapping("/habitaciones/new")
     public String habitacionesFrom(Model model){
-        model.addAttribute("habitaciones", new Habitaciones());
+        model.addAttribute("habitaciones", new Habitacion());
         return "Habitacion nueva";//placeholder creo 
     }
     
     @PostMapping("/habitaciones/new/save")
-    public String habitacionGuardar(@ModelAttribute Habitaciones habitacion){
+    public String habitacionGuardar(@ModelAttribute Habitacion habitacion){
         habitacionRepository.insertarHabitacion(habitacion.getId(), habitacion.getCapacidad(),habitacion.getCosto(), habitacion.getTiposHabitacion_tipo());
         return"rederict/habitaciones";
     }
 
     @GetMapping("/habitaciones/{id}/edit")
     public String habitacionEditarForm(@PathVariable("id") int id,Model model){
-        Habitaciones habitacion= habitacionRepository.darHabitacion(id);
+        Habitacion habitacion= habitacionRepository.darHabitacion(id);
         if(habitacion != null){
             model.addAttribute("habitacion", habitacion);
             return "Habitacioneditada";
@@ -46,7 +46,7 @@ public class HabitacionesController {
     }
 
     @PostMapping("/habitaciones/{id}/edit/save")
-    public String habitacionEditarGuardar(@PathVariable("id") int id,@ModelAttribute Habitaciones habitacion){
+    public String habitacionEditarGuardar(@PathVariable("id") int id,@ModelAttribute Habitacion habitacion){
 
         habitacionRepository.actualizarHabitacion(id,habitacion.getCapacidad(), habitacion.getCosto(),habitacion.getTiposHabitacion_tipo());
         return "redirect/habitaciones";
