@@ -48,4 +48,8 @@ public class Clientes {
         this.correo = correo;
     }
 
+    public String getTipoDocumento() {
+        return null;
+    }
+
 }
