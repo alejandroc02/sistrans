@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Tipos Usuarios</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+
+</head>
+<body>
+    <br>
+    <form th:action="@{'/tipo_usuarios/' + ${id} + '/edit/save'}" th:object="${tipoUsuario}" method="post">
+        <div th:replace="~{fragments/tipoUsuarioForm :: tipoUsuarioForm(titulo='Editar tipos usuarios', tipoUsuario=${tipoUsuario})}">
+        </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear servicio</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body>
+    <br>
+    <div class="container border border-2 w-70">    
+
+    <h1 class="text">Crear habitación</h1>
+
+    <form th:action="@{/servicios/new/save}" method="post">
+        
+        <label class="col-form-label" for="tipo"> Tipo de servicio</label>
+        <select class="form-control" id="tipo" name="tipo" required>
+            <option value="bar">bar</option>
+            <option value="gimnasio">gimnasio</option>
+            <option value="internet">internet</option>
+            <option value="lavadoSecadoEmbolado">lavadoSecadoEmbolado</option>
+            <option value="piscina">piscina</option>
+            <option value="prestamo">prestamo</option>
+            <option value="restaurante">restaurante</option>
+            <option value="salon">salon</option>
+            <option value="spa">spa</option>
+            <option value="supermercado">supermercado</option>
+            <option value="tienda">tienda</option>
+        </select><br>      
+        <label class="col-form-label" for="descripcion">Descripcion del servicio</label>
+        <input class="form-control" type="text" id="descripcion" name="descripcion" required><br>
+
+        <br>
+        <div class="text-center">
+        <input type="submit" value="Guardar" class="btn btn-primary">
+        <a th:href="@{/servicios}" class="btn btn-primary">Cancelar</a>
+        </div>
+    </br>
+    </form>
+    </div>
+</body>
+</html>

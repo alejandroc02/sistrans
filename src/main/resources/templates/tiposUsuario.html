@@ -17,11 +17,11 @@
                 </tr>
             </thead>
             <tbody>
-                <th:block th:each="tiposUsuario : ${tiposUsuario}">
+                <th:block th:each="tipoUsuario : ${tipoUsuario}">
                     <tr>
-                        <td th:text="${tiposUsuario.tipo}"></td>
+                        <td th:text="${tipoUsuario.tipo}"></td>
                         <td>
-                            <a th:href="@{'/tiposUsuario/' + ${tiposUsuario.tipo} + '/delete'}"
+                            <a th:href="@{'/tipoUsuario/' + ${tipoUsuario.tipo} + '/delete'}"
                                onclick="return confirm('¿Está seguro de borrar el tipo?')">Eliminar</a>
                         </td>
                     </tr>
@@ -29,7 +29,7 @@
             </tbody>
         </table>
         <a th:href="@{/}" class="btn btn-primary">Volver</a>
-        <a th:href="@{tiposUsuario/new}" class = "btn btn-primary">Añadir tipo de usuario</a>
+        <a th:href="@{tipoUsuario/new}" class = "btn btn-primary">Añadir tipo de usuario</a>
     </div>
 </body>
 </html>

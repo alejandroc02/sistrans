@@ -11,11 +11,11 @@
         <h1 class = "text-center" th:text="${titulo}"></h1>
         <form action="">
             <label class="col-form-label">Tipo</label>
-            <input class="form-control" type="text" id = "tipo" name="tipo" required th:value="${tiposUsuario.tipo}"/>
+            <input class="form-control" type="text" id = "tipo" name="tipo" required th:value="${tipoUsuario.tipo}"/>
             <br>
             <div class = "text-center">
                 <input type="submit" value="Guardar" class = "btn btn-primary">
-                <a th:href="@{/tiposUsuario}" class = "btn btn-primary">Cancelar</a>
+                <a th:href="@{/tipoUsuario}" class = "btn btn-primary">Cancelar</a>
             </div>
         </form>
     </div>
