@@ -24,8 +24,8 @@ public interface CheckOutRepository extends JpaRepository<CheckOuts, Integer> {
     // Insertar un nuevo check-out
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO checkout (reservas_id, clientes_num_documento, fecha_salida) VALUES (:reservas_id, :clientes_num_documento, :fecha_salida)", nativeQuery = true)
-    void insertarCheckOut(@Param("reservas_id") Habitacion habitacion, @Param("clientes_num_documento") Reservas reservas, @Param("fecha_salida") java.sql.Date fechaSalida);
+    @Query(value = "INSERT INTO checkout (reservas_id, habitacion_id, fecha_salida) VALUES (:reservas_id, :habitacion_id, :fecha_salida)", nativeQuery = true)
+    void insertarCheckOut(@Param("reservas_id") Reservas reservas, @Param("habitacion_id") Habitacion habitacion, @Param("fecha_salida") java.sql.Date fechaSalida);
 
     // Actualizar la fecha de salida en un check-out por reserva_id
     @Modifying

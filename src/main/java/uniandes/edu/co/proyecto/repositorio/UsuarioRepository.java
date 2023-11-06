@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import uniandes.edu.co.proyecto.modelo.Tipohab;
 import uniandes.edu.co.proyecto.modelo.TiposUsuario;
 import uniandes.edu.co.proyecto.modelo.Usuarios;
 
@@ -38,4 +39,14 @@ public interface UsuarioRepository extends JpaRepository<Usuarios, String> {
     @Transactional
     @Query(value = "DELETE FROM usuarios WHERE id = :id", nativeQuery = true)
     void deleteUsuario(@Param("id") Long id);
+
+    //seleccionar tipo
+    @Query(value="SELECT tiposusuario_tipo FROM usuarios WHERE id=:id",nativeQuery=true)
+    void darTipoHabitacion(@Param("id") int id);
+
+    //eliminar, modificar/ insertar tipo de habitacion
+    @Modifying
+    @Transactional
+    @Query(value="UPDATE usuarios SET tiposusuario_tipo:=tiposusuario_tipo  WHERE id=:id" )
+    void actualizarTipoHabitacion(@Param("id") int id,@Param("tiposusuario_tipo") Tipohab tiposHabitacion);
 }

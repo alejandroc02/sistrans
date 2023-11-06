@@ -22,12 +22,12 @@ public class PlanesConsumosController {
         model.addAttribute("consumo", new Consumos());
         return "Consumo nuevo"; // Placeholder
     }
-// 
-//    @PostMapping("/consumos/new/save")
-//    public String consumoGuardar(@ModelAttribute Consumos consumo) {
-//        consumosRepository.insertarConsumo(consumo.getPk(), consumo.getServiciosTipo(), consumo.getDescripcion(), consumo.getCosto());//tipos
-//        return "redirect/consumos";
-//    }
+
+   @PostMapping("/consumos/new/save")
+   public String consumoGuardar(@ModelAttribute Consumos consumo) {
+       consumosRepository.insertarConsumo(consumo.getPk(), consumo.getPk().getServicios_tipo(), consumo.getDescripcion(), consumo.getCosto());//tipos
+      return "redirect/consumos";
+   }
 //
     @GetMapping("/consumos/{habitacionId}/{serviciosTipo}/edit")
     public String consumoEditarForm(@PathVariable("habitacionId") int habitacionId, @PathVariable("serviciosTipo") String serviciosTipo, Model model) {
