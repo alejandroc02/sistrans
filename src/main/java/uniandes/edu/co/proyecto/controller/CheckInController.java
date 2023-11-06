@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import uniandes.edu.co.proyecto.modelo.CheckIn;
 import uniandes.edu.co.proyecto.repositorio.CheckInRepository;
 
-import java.sql.Date;
+
 
 public class CheckInController {
 
@@ -27,7 +27,7 @@ public class CheckInController {
 
     @PostMapping("/checkins/new/save")
     public String checkInGuardar(@ModelAttribute CheckIn checkin) {
-        checkInRepository.insertarCheckIn(checkin.getPk(), checkin.getClientesNumDocumento(), checkin.getFecha_ingreso()); //arerglar getclientes en modelo
+        checkInRepository.insertarCheckIn(checkin.getPk().getReservas_id(), checkin.getPk().getclientesPK(), checkin.getFecha_ingreso()); //arerglar getclientes en modelo
         return "redirect/checkins";
     }
 

@@ -3,22 +3,25 @@ package uniandes.edu.co.proyecto.modelo;
 import java.sql.Date;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "reservasServicio")
+@Table(name = "reservasServ")
 public class ReservasServ {
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
 
     private int duracion_hora;
     private Date dia;
     private String hora;
     @ManyToOne
-    @JoinColumn(name = "habitaciones_id", referencedColumnName = "id")
+    @JoinColumn(name = "habitacion_id", referencedColumnName = "id")
     private Habitacion Habitacion_id;
 
     public ReservasServ() {
@@ -30,7 +33,7 @@ public class ReservasServ {
         this.duracion_hora = duracion_hora;
         this.dia = dia;
         this.hora = hora;
-        Habitacion_id = habitacion_id;
+        this.Habitacion_id = habitacion_id;
     }
 
     public int getId() {
@@ -70,7 +73,7 @@ public class ReservasServ {
     }
 
     public void setHabitaciones_id(Habitacion habitacion_id) {
-        Habitacion_id = habitacion_id;
+        this.Habitacion_id = habitacion_id;
     }
 
     

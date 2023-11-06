@@ -10,8 +10,8 @@ import jakarta.persistence.ManyToOne;
 public class AdicionalPK implements Serializable {
     
     @ManyToOne
-    @JoinColumn(name = "SalonesReunion_id", referencedColumnName = "id")
-    private Reunion SalonesReunion_id;
+    @JoinColumn(name = "Reuniones_id", referencedColumnName = "id")
+    private Reunion Reunion_id;
     
     @ManyToOne
     @JoinColumn(name = "Equipos_id", referencedColumnName = "id")
@@ -23,20 +23,20 @@ public class AdicionalPK implements Serializable {
     }
 
 
-    public AdicionalPK(Reunion salonesReunion_id, Equipos equipos_id) {
+    public AdicionalPK(Reunion reunion_id, Equipos equipos_id) {
         super();
-        SalonesReunion_id = salonesReunion_id;
+        Reunion_id = reunion_id;
         Equipos_id = equipos_id;
     }
 
 
-    public Reunion getSalonesReunion_id() {
-        return SalonesReunion_id;
+    public Reunion getReunion_id() {
+        return Reunion_id;
     }
 
 
-    public void setSalonesReunion_id(Reunion salonesReunion_id) {
-        SalonesReunion_id = salonesReunion_id;
+    public void setReunion_id(Reunion reunion_id) {
+        Reunion_id = reunion_id;
     }
 
 

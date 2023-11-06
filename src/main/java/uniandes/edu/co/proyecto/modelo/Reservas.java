@@ -3,6 +3,8 @@ package uniandes.edu.co.proyecto.modelo;
 import java.sql.Date;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinColumns;
@@ -14,14 +16,14 @@ import jakarta.persistence.Table;
 public class Reservas {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
 
     private Date fecha_inicio;
     private Date fecha_salida;
     private int num_personas;
     @ManyToOne
-    @JoinColumns({
-            @JoinColumn(name = "Usuarios_tipo_documento", referencedColumnName = "tipo_documento"),
+    @JoinColumns({  
             @JoinColumn(name = "Usuarios_num_documento", referencedColumnName = "num_documento"),
             @JoinColumn(name = "Usuarios_nombre", referencedColumnName = "nombre"),
             @JoinColumn(name = "Usuarios_correo", referencedColumnName = "correo")

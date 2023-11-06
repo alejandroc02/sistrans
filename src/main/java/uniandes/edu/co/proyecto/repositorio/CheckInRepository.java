@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 import uniandes.edu.co.proyecto.modelo.CheckIn;
+import uniandes.edu.co.proyecto.modelo.Clientes;
+import uniandes.edu.co.proyecto.modelo.Reservas;
 
 import java.util.Collection;
 
@@ -23,7 +25,7 @@ public interface CheckInRepository extends JpaRepository<CheckIn, Integer> {
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO checkin (reservas_id, clientes_num_documento, fecha_ingreso) VALUES (:reservas_id, :clientes_num_documento, :fecha_ingreso)", nativeQuery = true)
-    void insertarCheckIn(@Param("reservas_id") Integer reservasId, @Param("clientes_num_documento") Integer clientesNumDocumento, @Param("fecha_ingreso") java.sql.Date fechaIngreso);
+    void insertarCheckIn(@Param("reservas_id") Reservas reservas, @Param("clientes_num_documento") Clientes clientes, @Param("fecha_ingreso") java.sql.Date fechaIngreso);
 
     // Actualizar la fecha de ingreso en un check-in por reserva_id
     @Modifying

@@ -5,7 +5,10 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
+
+import uniandes.edu.co.proyecto.modelo.PlanesConsumo;
 import uniandes.edu.co.proyecto.modelo.Reservas;
+import uniandes.edu.co.proyecto.modelo.Usuarios;
 
 import java.util.Collection;
 
@@ -23,13 +26,13 @@ public interface ReservasRepository extends JpaRepository<Reservas, Integer> {
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO reservas (id, fecha_inicio, fecha_salida, num_personas, planesconsumo_id, usuarios_num_documento) VALUES (:id, :fecha_inicio, :fecha_salida, :num_personas, :planesconsumo_id, :usuarios_num_documento)", nativeQuery = true)
-    void insertarReserva(@Param("id") Integer id, @Param("fecha_inicio") java.sql.Date fechaInicio, @Param("fecha_salida") java.sql.Date fechaSalida, @Param("num_personas") Integer numPersonas, @Param("planesconsumo_id") Integer planesConsumoId, @Param("usuarios_num_documento") Integer usuariosNumDocumento);
+    void insertarReserva(@Param("id") Integer id, @Param("fecha_inicio") java.sql.Date fechaInicio, @Param("fecha_salida") java.sql.Date fechaSalida, @Param("num_personas") Integer numPersonas, @Param("planesconsumo_id") PlanesConsumo planesConsumo, @Param("usuarios_num_documento") Usuarios usuarios);
 
     // Actualizar una reserva por ID
     @Modifying
     @Transactional
     @Query(value = "UPDATE reservas SET fecha_inicio = :fecha_inicio, fecha_salida = :fecha_salida, num_personas = :num_personas, planesconsumo_id = :planesconsumo_id, usuarios_num_documento = :usuarios_num_documento WHERE id = :id", nativeQuery = true)
-    void actualizarReserva(@Param("id") Integer id, @Param("fecha_inicio") java.sql.Date fechaInicio, @Param("fecha_salida") java.sql.Date fechaSalida, @Param("num_personas") Integer numPersonas, @Param("planesconsumo_id") Integer planesConsumoId, @Param("usuarios_num_documento") Integer usuariosNumDocumento);
+    void actualizarReserva(@Param("id") Integer id, @Param("fecha_inicio") java.sql.Date fechaInicio, @Param("fecha_salida") java.sql.Date fechaSalida, @Param("num_personas") Integer numPersonas, @Param("planesconsumo_id") PlanesConsumo planesConsumo, @Param("usuarios_num_documento") Usuarios usuarios);
 
     // Eliminar una reserva por ID
     @Modifying

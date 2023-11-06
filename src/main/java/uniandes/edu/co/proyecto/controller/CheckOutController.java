@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import uniandes.edu.co.proyecto.modelo.CheckOuts;
 import uniandes.edu.co.proyecto.repositorio.CheckOutRepository;
 
-import java.sql.Date;
 
 public class CheckOutController {
 
@@ -27,7 +26,8 @@ public class CheckOutController {
 
     @PostMapping("/checkouts/new/save")
     public String checkOutGuardar(@ModelAttribute CheckOuts checkout) {
-        checkOutRepository.insertarCheckOut(checkout.getPk(), checkout.getClientesNumDocumento(), checkout.getFecha_salida());//arreglar getclientes
+        checkOutRepository.insertarCheckOut(checkout.getPk().getHabitacion_id(), checkout.getPk().getReservas_id(), checkout.getFecha_salida());
+        //No es clientes, es con el ID de la habitacion
         return "redirect/checkouts";
     }
 

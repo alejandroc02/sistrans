@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "adicional")
+@Table(name = "adicionales")
 public class Adicional {
 
     @EmbeddedId
@@ -17,8 +17,8 @@ public class Adicional {
         ;
     }
 
-    public Adicional(Reunion salonesReunion_id, Equipos equipos_id, double costo) {
-        this.pk = new AdicionalPK(salonesReunion_id, equipos_id);
+    public Adicional(Reunion Reunion_id, Equipos equipos_id, double costo) {
+        this.pk = new AdicionalPK(Reunion_id, equipos_id);
         this.costo = costo;
     }
 

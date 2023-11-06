@@ -14,8 +14,8 @@ public class Gratis {
         ;
     }
 
-    public Gratis(Conferencia salonesConferencia_id, Equipos equipos_id) {
-        this.pk = new GratisPK(salonesConferencia_id, equipos_id);
+    public Gratis(Conferencia Conferencia_id, Equipos equipos_id) {
+        this.pk = new GratisPK(Conferencia_id, equipos_id);
     }
 
     public GratisPK getPk() {

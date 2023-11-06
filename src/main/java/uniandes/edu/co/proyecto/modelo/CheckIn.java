@@ -15,22 +15,17 @@ public class CheckIn {
 
         private Date fecha_ingreso;
 
-        public CheckIn(Reservas reservas_id, int informacionclientes_num_documento, String informacionclientes_tipo_documento, Date fecha_ingreso) {
+        public CheckIn(Reservas reservas_id, Clientes clientes_num_documento, Date fecha_ingreso) {
             
-            Clientes informacionClientesPK = new Clientes();
-            
-            informacionClientesPK.setPk(new ClientesPK(informacionclientes_tipo_documento, informacionclientes_num_documento));
-            
-            this.pk = new CheckInPK(reservas_id, informacionClientesPK);
+                    
+            this.pk = new CheckInPK(reservas_id, clientes_num_documento);
             
             this.fecha_ingreso = fecha_ingreso;
         }
         
-
         public CheckIn() {
             ;
         }
-
         public CheckInPK getPk() {
             return pk;
         }

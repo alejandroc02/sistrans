@@ -1,55 +1,64 @@
 package uniandes.edu.co.proyecto.modelo;
 
-import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "clientes")
 public class Clientes {
-
-    @EmbeddedId
-    private ClientesPK pk;
-
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    
+    private int num_documento;
     private String nombre;
     private String correo;
-
-    public Clientes(String tipo_documento, int num_documento, String nombre, String correo) {
-        this.pk = new ClientesPK(tipo_documento, num_documento);
+    private String tipo_documento;
+    
+    public Clientes(int num_documento,String tipo_documento , String nombre, String correo) {
         this.nombre = nombre;
         this.correo = correo;
+        this.tipo_documento=tipo_documento;
+        this.num_documento=num_documento;
     }
 
     public Clientes() {
         ;
     }
 
-    public ClientesPK getPk() {
-        return pk;
+    public void setTipo_documento(String tipo_documento) {
+        this.tipo_documento = tipo_documento;
     }
 
-    public void setPk(ClientesPK pk) {
-        this.pk = pk;
-    }
-
-    public String getNombre() {
-        return nombre;
+    public void setNum_documento(int num_documento) {
+        this.num_documento = num_documento;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getCorreo() {
-        return correo;
-    }
-
     public void setCorreo(String correo) {
         this.correo = correo;
     }
 
-    public String getTipoDocumento() {
-        return null;
+    public String getTipo_documento() {
+        return tipo_documento;
     }
+
+    public int getNum_documento() {
+        return num_documento;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+    
 
 }

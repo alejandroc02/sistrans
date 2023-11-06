@@ -2,7 +2,7 @@ package uniandes.edu.co.proyecto.repositorio;
 
 import java.util.Collection;
 
-import org.hibernate.sql.ast.tree.expression.Collation;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -10,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.Habitacion;
-import uniandes.edu.co.proyecto.modelo.TiposHabitacion;
+import uniandes.edu.co.proyecto.modelo.Tipohab;
 
 public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>{
     
@@ -28,13 +28,13 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO habitaciones (id, capacidad, precio, tipohab_id_tipo ) VALUES (placeholdferBDP,:id,:capacidad,:precio,:tipohab_id_tipo)", nativeQuery = true)
-    void insertarHabitacion(@Param("id") Integer id,@Param("capacidad") Integer capacidad,@Param("precio") Number precio,@Param("tipohab_id_tipo") TiposHabitacion tiposHabitacion);
+    void insertarHabitacion(@Param("id") Integer id,@Param("capacidad") Integer capacidad,@Param("precio") Number precio,@Param("tipohab_id_tipo") Tipohab tiposHabitacion);
 
 
     @Modifying
     @Transactional
     @Query(value = "UPDATE habitaciones SET  capacidad:=capacidad,precio=:precio,tipohab_id_tipo:=tipohab_id_tipo",nativeQuery = true)
-    void actualizarHabitacion(@Param("id") Integer id,@Param("capacidad") Integer capacidad,@Param("precio") Number precio,@Param("tipohab_id_tipo") TiposHabitacion tiposHabitacion);
+    void actualizarHabitacion(@Param("id") Integer id,@Param("capacidad") Integer capacidad,@Param("precio") Number precio,@Param("tipohab_id_tipo") Tipohab tiposHabitacion);
 
 
     @Modifying

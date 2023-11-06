@@ -14,7 +14,7 @@ public class ReservasSpaPK implements Serializable {
     private Spas Spas_id;
     
     @ManyToOne
-    @JoinColumn(name = "ReservasServicio_id", referencedColumnName = "id")
+    @JoinColumn(name = "ReservasServ_id", referencedColumnName = "id")
     private ReservasServ ReservasServicio_id;
 
     public ReservasSpaPK() {
@@ -23,8 +23,8 @@ public class ReservasSpaPK implements Serializable {
 
     public ReservasSpaPK(Spas spas_id, ReservasServ reservasServicio_id) {
         super();
-        Spas_id = spas_id;
-        ReservasServicio_id = reservasServicio_id;
+        this.Spas_id = spas_id;
+        this.ReservasServicio_id = reservasServicio_id;
     }
 
     public Spas getSpas_id() {

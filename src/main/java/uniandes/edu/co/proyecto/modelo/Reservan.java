@@ -1,7 +1,4 @@
 package uniandes.edu.co.proyecto.modelo;
-
-import java.sql.Date;
-
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -13,11 +10,11 @@ public class Reservan {
     @EmbeddedId
     private ReservanPK pk;
 
-    private Date fecha_salida;
+    
 
-    public Reservan(Habitacion Habitacion_id, Reservas Reservas_id, Date fecha_salida) {
+    public Reservan(Habitacion Habitacion_id, Reservas Reservas_id) {
         this.pk = new ReservanPK(Reservas_id, Habitacion_id);
-        this.fecha_salida = fecha_salida;
+       
     }
 
     public Reservan() {
@@ -32,13 +29,7 @@ public class Reservan {
         this.pk = pk;
     }
 
-    public Date getFecha_salida() {
-        return fecha_salida;
-    }
-
-    public void setFecha_salida(Date fecha_salida) {
-        this.fecha_salida = fecha_salida;
-    }
+    
 
     
     

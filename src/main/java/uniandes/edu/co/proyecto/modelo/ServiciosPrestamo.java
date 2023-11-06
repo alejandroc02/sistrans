@@ -1,15 +1,18 @@
 package uniandes.edu.co.proyecto.modelo;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "serviciosprestamo")
+@Table(name = "servicios_prestamo")
 public class ServiciosPrestamo {
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
 
     private int cantidad;
@@ -27,7 +30,7 @@ public class ServiciosPrestamo {
         this.id = id;
         this.cantidad = cantidad;
         this.devuelto = devuelto;
-        Servicios_tipo = servicios_tipo;
+        this.Servicios_tipo = servicios_tipo;
     }
 
     public int getId() {
@@ -59,7 +62,7 @@ public class ServiciosPrestamo {
     }
 
     public void setTiposServicio_tipo(Servicios servicios_tipo) {
-        Servicios_tipo= servicios_tipo;
+        this.Servicios_tipo= servicios_tipo;
     }
 
     

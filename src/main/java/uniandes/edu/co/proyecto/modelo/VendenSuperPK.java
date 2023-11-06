@@ -14,7 +14,7 @@ public class VendenSuperPK implements Serializable {
     private Supermercados Supermercados_id;
     
     @ManyToOne
-    @JoinColumn(name = "ProductosSuper_id", referencedColumnName = "id")
+    @JoinColumn(name = "Productos_Super_id", referencedColumnName = "id")
     private ProductosSuper ProductosSuper_id;
 
     public VendenSuperPK() {

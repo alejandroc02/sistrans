@@ -14,7 +14,7 @@ public class VendenTPK implements Serializable {
     private Tiendas Tiendas_id;
     
     @ManyToOne
-    @JoinColumn(name = "ProductosTienda_id", referencedColumnName = "id")
+    @JoinColumn(name = "Productos_T_id", referencedColumnName = "id")
     private ProductosT ProductosTienda_id;
 
     public VendenTPK() {

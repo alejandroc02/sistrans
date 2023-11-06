@@ -7,6 +7,9 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 import uniandes.edu.co.proyecto.modelo.Consumos;
 
+import uniandes.edu.co.proyecto.modelo.Habitacion;
+import uniandes.edu.co.proyecto.modelo.Servicios;
+
 import java.util.Collection;
 
 public interface ConsumosRepository extends JpaRepository<Consumos, Integer> {
@@ -23,7 +26,7 @@ public interface ConsumosRepository extends JpaRepository<Consumos, Integer> {
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO consumos (habitacion_id, servicios_tipo, descripcion, costo) VALUES (:habitacion_id, :servicios_tipo, :descripcion, :costo)", nativeQuery = true)
-    void insertarConsumo(@Param("habitacion_id") Integer habitacionId, @Param("servicios_tipo") String serviciosTipo, @Param("descripcion") String descripcion, @Param("costo") Number costo);
+    void insertarConsumo(@Param("habitacion_id") Habitacion habitacion, @Param("servicios_tipo") Servicios servicios, @Param("descripcion") String descripcion, @Param("costo") Number costo);
 
     // Actualizar un consumo
     @Modifying

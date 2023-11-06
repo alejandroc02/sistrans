@@ -7,27 +7,45 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tipos_usuario")
-public class TiposUsuario {
+@Table(name = "tipo_hab")
+public class Tipohab {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    private int id;
     private String tipo;
 
-    public TiposUsuario(String tipo) {
+    
+    
+    public Tipohab(int id,String tipo) {
+        this.id=id;
         this.tipo = tipo;
+        
     }
 
-    public TiposUsuario() {
+    public Tipohab() {
         ;
     }
 
-    public String getTipo() {
-        return tipo;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+
+    
+
+    
+    
 }

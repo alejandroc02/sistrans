@@ -1,6 +1,8 @@
 package uniandes.edu.co.proyecto.modelo;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -9,6 +11,7 @@ import jakarta.persistence.Table;
 public class PlanesConsumo {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
 
     private String nombre;
@@ -16,18 +19,18 @@ public class PlanesConsumo {
     private double costo;
     private double desc_reserva;
     private double desc_bar;
-    private double desc_restaurante;
+    private double desc_rest;
     private double desc_servicio;
 
     public PlanesConsumo(int id, String nombre, int estadia_min, double costo, double desc_reserva, double desc_bar,
-            double desc_restaurante, double desc_servicio) {
+            double desc_rest, double desc_servicio) {
         this.id = id;
         this.nombre = nombre;
         this.estadia_min = estadia_min;
         this.costo = costo;
         this.desc_reserva = desc_reserva;
         this.desc_bar = desc_bar;
-        this.desc_restaurante = desc_restaurante;
+        this.desc_rest = desc_rest;
         this.desc_servicio = desc_servicio;
     }
 
@@ -83,12 +86,12 @@ public class PlanesConsumo {
         this.desc_bar = desc_bar;
     }
 
-    public double getDesc_restaurante() {
-        return desc_restaurante;
+    public double getdesc_rest() {
+        return desc_rest;
     }
 
-    public void setDesc_restaurante(double desc_restaurante) {
-        this.desc_restaurante = desc_restaurante;
+    public void setdesc_rest(double desc_rest) {
+        this.desc_rest = desc_rest;
     }
 
     public double getDesc_servicio() {

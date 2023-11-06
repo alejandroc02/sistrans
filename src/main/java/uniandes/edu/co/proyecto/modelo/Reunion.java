@@ -1,20 +1,23 @@
 package uniandes.edu.co.proyecto.modelo;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "reunion")
+@Table(name = "reuniones")
 public class Reunion {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "TiposServicio_tipo", referencedColumnName = "tipo")
+    @JoinColumn(name = "Servicios_tipo", referencedColumnName = "tipo")
     private Servicios Servicios_tipo;
 
     private int capacidad;
@@ -26,7 +29,7 @@ public class Reunion {
 
     public Reunion(int id, Servicios servicios_tipo, int capacidad, double costo_hora) {
         this.id = id;
-        Servicios_tipo = servicios_tipo;
+        this.Servicios_tipo = servicios_tipo;
         this.capacidad = capacidad;
         this.costo_hora = costo_hora;
     }
@@ -39,12 +42,12 @@ public class Reunion {
         this.id = id;
     }
 
-    public Servicios getTiposServicio_tipo() {
+    public Servicios getServicios_tipo() {
         return Servicios_tipo;
     }
 
-    public void setTiposServicio_tipo(Servicios servicios_tipo) {
-        Servicios_tipo = servicios_tipo;
+    public void setServicios_tipo(Servicios servicios_tipo) {
+        this.Servicios_tipo = servicios_tipo;
     }
 
     public int getCapacidad() {

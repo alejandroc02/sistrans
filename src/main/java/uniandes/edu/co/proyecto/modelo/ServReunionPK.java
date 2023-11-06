@@ -10,21 +10,21 @@ import jakarta.persistence.ManyToOne;
 public class ServReunionPK implements Serializable {
     
     @ManyToOne
-    @JoinColumn(name = "ReservasServicio_id", referencedColumnName = "id")
+    @JoinColumn(name = "Reservas_Serv_id", referencedColumnName = "id")
     private ReservasServ ReservasServicio_id;
     
     @ManyToOne
-    @JoinColumn(name = "SalonesReunion_id", referencedColumnName = "id")
-    private Reunion SalonesReunion_id;
+    @JoinColumn(name = "reuniones_id", referencedColumnName = "id")
+    private Reunion reuniones_id;
 
     public ServReunionPK() {
         super();
     }
 
-    public ServReunionPK(ReservasServ ReservasServico_id, Reunion SalonesReunion_id) {
+    public ServReunionPK(ReservasServ ReservasServico_id, Reunion reuniones_id) {
         super();
         this.ReservasServicio_id = ReservasServico_id;
-        this.SalonesReunion_id = SalonesReunion_id;
+        this.reuniones_id = reuniones_id;
     }
 
     public ReservasServ getReservasServicio_id() {
@@ -32,15 +32,15 @@ public class ServReunionPK implements Serializable {
     }
 
     public void setReservasServicio_id(ReservasServ reservasServicio_id) {
-        ReservasServicio_id = reservasServicio_id;
+        this.ReservasServicio_id = reservasServicio_id;
     }
 
-    public Reunion getSalonesReunion_id() {
-        return SalonesReunion_id;
+    public Reunion getreuniones_id() {
+        return reuniones_id;
     }
 
-    public void setSalonesReunion_id(Reunion salonesReunion_id) {
-        SalonesReunion_id = salonesReunion_id;
+    public void setreuniones_id(Reunion reuniones_id) {
+        this.reuniones_id = reuniones_id;
     }
 
 

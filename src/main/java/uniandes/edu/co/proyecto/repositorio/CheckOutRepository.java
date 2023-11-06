@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 import uniandes.edu.co.proyecto.modelo.CheckOuts;
+import uniandes.edu.co.proyecto.modelo.Habitacion;
+import uniandes.edu.co.proyecto.modelo.Reservas;
 
 import java.util.Collection;
 
@@ -23,7 +25,7 @@ public interface CheckOutRepository extends JpaRepository<CheckOuts, Integer> {
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO checkout (reservas_id, clientes_num_documento, fecha_salida) VALUES (:reservas_id, :clientes_num_documento, :fecha_salida)", nativeQuery = true)
-    void insertarCheckOut(@Param("reservas_id") Integer reservasId, @Param("clientes_num_documento") Integer clientesNumDocumento, @Param("fecha_salida") java.sql.Date fechaSalida);
+    void insertarCheckOut(@Param("reservas_id") Habitacion habitacion, @Param("clientes_num_documento") Reservas reservas, @Param("fecha_salida") java.sql.Date fechaSalida);
 
     // Actualizar la fecha de salida en un check-out por reserva_id
     @Modifying

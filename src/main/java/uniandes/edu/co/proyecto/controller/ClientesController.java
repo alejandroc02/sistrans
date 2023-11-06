@@ -25,7 +25,7 @@ public class ClientesController {
 
     @PostMapping("/clientes/new/save")
     public String clienteGuardar(@ModelAttribute Clientes cliente) {
-        clientesRepository.insertarCliente(cliente.getTipoDocumento(), cliente.getTipoDocumento(), cliente.getNombre(), cliente.getCorreo());
+        clientesRepository.insertarCliente(cliente.getNum_documento(), cliente.getNum_documento(), cliente.getNombre(), cliente.getCorreo());
         return "redirect/clientes";
     }
 

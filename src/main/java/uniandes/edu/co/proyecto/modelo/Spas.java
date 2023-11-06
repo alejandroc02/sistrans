@@ -1,6 +1,8 @@
 package uniandes.edu.co.proyecto.modelo;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -11,6 +13,7 @@ import jakarta.persistence.Table;
 public class Spas {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
 
     @ManyToOne
@@ -25,7 +28,7 @@ public class Spas {
 
     public Spas(int id, Servicios servicios_tipo, int capacidad) {
         this.id = id;
-        Servicios_tipo = servicios_tipo;
+        this.Servicios_tipo = servicios_tipo;
         this.capacidad = capacidad;
     }
 
@@ -42,7 +45,7 @@ public class Spas {
     }
 
     public void setTiposServicio_tipo(Servicios servicios_tipo) {
-        Servicios_tipo= servicios_tipo;
+        this.Servicios_tipo= servicios_tipo;
     }
 
     public int getCapacidad() {

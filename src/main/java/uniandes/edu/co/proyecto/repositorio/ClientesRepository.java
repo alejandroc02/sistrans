@@ -23,7 +23,7 @@ public interface ClientesRepository extends JpaRepository<Clientes, Integer> {
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO clientes (tipo_documento, num_documento, nombre, correo) VALUES (:tipo_documento, :num_documento, :nombre, :correo)", nativeQuery = true)
-    void insertarCliente(@Param("tipo_documento") String tipoDocumento, @Param("num_documento") String string, @Param("nombre") String nombre, @Param("correo") String correo);
+    void insertarCliente(@Param("tipo_documento") int i, @Param("num_documento") int j, @Param("nombre") String nombre, @Param("correo") String correo);
 
     // Actualizar un cliente
     @Modifying

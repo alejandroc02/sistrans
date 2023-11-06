@@ -19,7 +19,7 @@ public class UsuarioController {
         model.addAttribute("Usuarios", usuarios);
         return "usuarios"; // Este es un placeholder
     }
-
+    
     @GetMapping("/usuarios/new")
     public String usuariosForm(Model model) {
         model.addAttribute("usuario", new Usuarios());
@@ -28,7 +28,7 @@ public class UsuarioController {
 
     @PostMapping("/usuarios/new/save")
     public String usuarioGuardar(@ModelAttribute Usuarios usuario) {
-        usuarioRepository.insertUsuario(usuario.getTipoDocumento(), usuario.getNumDocumento(), usuario.getNombre(), usuario.getCorreo(), usuario.getTipoUsuarioTipo());// todos los atributos son pk ?
+        usuarioRepository.insertUsuario(usuario.getNum_documento(), usuario.getTipo_documento(), usuario.getNombre(), usuario.getCorreo(), usuario.getTiposUsuario_tipo());// todos los atributos son pk ?
         return "redirect/usuarios";
     }
 
@@ -45,7 +45,7 @@ public class UsuarioController {
 
     @PostMapping("/usuarios/{id}/edit/save")
     public String usuarioEditarGuardar(@PathVariable("id") Long id, @ModelAttribute Usuarios usuario) {
-        usuarioRepository.updateUsuario(id, usuario.getTipoDocumento(), usuario.getNumDocumento(), usuario.getNombre(), usuario.getCorreo(), usuario.getTipoUsuarioTipo());
+        usuarioRepository.updateUsuario(id, usuario.getTipo_documento(), usuario.getNum_documento(), usuario.getNombre(), usuario.getCorreo(), usuario.getTiposUsuario_tipo());
         return "redirect/usuarios";
     }
 

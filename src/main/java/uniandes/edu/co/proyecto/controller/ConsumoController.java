@@ -25,7 +25,7 @@ public class ConsumoController {
 
     @PostMapping("/consumos/new/save")
     public String consumoGuardar(@ModelAttribute Consumos consumo) {
-        consumosRepository.insertarConsumo(consumo.getPk(), consumo.getServiciosTipo(), consumo.getDescripcion(), consumo.getCosto()); //getserviciostipo< PK??
+        consumosRepository.insertarConsumo(consumo.getPk().getHabitacion_id(), consumo.getPk().getServicios_tipo(), consumo.getDescripcion(), consumo.getCosto()); 
         return "redirect/consumos";
     }
 

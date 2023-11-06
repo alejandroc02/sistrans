@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinColumns;
+
 import jakarta.persistence.ManyToOne;
 
 @Embeddable
@@ -15,20 +15,15 @@ public class CheckInPK implements Serializable {
     private Reservas Reservas_id;
 
     @ManyToOne
-    @JoinColumns({
-            @JoinColumn(name = "Usuarios_tipo_documento", referencedColumnName = "tipo_documento"),
-            @JoinColumn(name = "Usuarios_num_documento", referencedColumnName = "num_documento"),
-    })
-    private Clientes informacionClientesPK;
+    
+    @JoinColumn(name = "Usuarios_num_documento", referencedColumnName = "num_documento")
+    private Clientes clientes_num_documento;
 
-    public CheckInPK() { 
-        super();
-    }
 
-    public CheckInPK(Reservas reservas_id, Clientes informacionClientesPK) {
+    public CheckInPK(Reservas reservas_id, Clientes clientes_num_documento2 ) {
         super();
         this.Reservas_id = reservas_id;
-        this.informacionClientesPK = informacionClientesPK;
+        this.clientes_num_documento = clientes_num_documento2;
     }
 
     public Reservas getReservas_id() {
@@ -39,12 +34,12 @@ public class CheckInPK implements Serializable {
         Reservas_id = reservas_id;
     }
 
-    public Clientes getInformacionClientesPK() {
-        return informacionClientesPK;
+    public Clientes getclientesPK() {
+        return clientes_num_documento;
     }
 
-    public void setInformacionClientesPK(Clientes informacionClientesPK) {
-        this.informacionClientesPK = informacionClientesPK;
+    public void setclientesPK(Clientes clientes_num_documento) {
+        this.clientes_num_documento = clientes_num_documento;
     } 
 
 }

@@ -1,16 +1,19 @@
 package uniandes.edu.co.proyecto.modelo;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "lavanderia")
+@Table(name = "lavanderias")
 public class Lavanderia {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
 
     @ManyToOne
@@ -34,46 +37,45 @@ public class Lavanderia {
         this.costo = costo;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public void setId(int id) {
         this.id = id;
     }
 
-    public Servicios getServiciostipo() {
-        return Servicios_tipo;
-    }
-
-    public void setTiposServicio_tipo(Servicios servicios_tipo) {
+    public void setServicios_tipo(Servicios servicios_tipo) {
         Servicios_tipo = servicios_tipo;
-    }
-
-    public String getTipo_prenda() {
-        return tipo_prenda;
     }
 
     public void setTipo_prenda(String tipo_prenda) {
         this.tipo_prenda = tipo_prenda;
     }
 
-    public int getCantidad_prendas() {
-        return cantidad_prendas;
-    }
-
     public void setCantidad_prendas(int cantidad_prendas) {
         this.cantidad_prendas = cantidad_prendas;
-    }
-
-    public double getCosto() {
-        return costo;
     }
 
     public void setCosto(double costo) {
         this.costo = costo;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public Servicios getServicios_tipo() {
+        return Servicios_tipo;
+    }
+
+    public String getTipo_prenda() {
+        return tipo_prenda;
+    }
+
+    public int getCantidad_prendas() {
+        return cantidad_prendas;
+    }
+
+    public double getCosto() {
+        return costo;
+    }
 
 
     

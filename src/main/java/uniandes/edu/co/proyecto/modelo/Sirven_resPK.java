@@ -14,7 +14,7 @@ public class Sirven_resPK implements Serializable {
     private Restaurantes Restaurantes_id;
     
     @ManyToOne
-    @JoinColumn(name = "ProductosRestaurante_id", referencedColumnName = "id")
+    @JoinColumn(name = "ProductosRes_id", referencedColumnName = "id")
     private ProductosRes ProductosRestaurante_id;
 
     public Sirven_resPK() {
