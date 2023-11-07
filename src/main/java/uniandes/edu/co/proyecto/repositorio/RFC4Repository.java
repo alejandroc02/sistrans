@@ -9,7 +9,7 @@ import java.util.Collection;
 /* 
  * MOSTRAR LOS SERVICIOS QUE CUMPLEN CON CIERTA CARACTERÍSTICA
  */
-public interface RFC4Repository extends JpaRepository<RFC4Result, Integer> {
+public interface RFC4Repository extends JpaRepository<RFC4Result, String> {
 
     @Query(value = "SELECT servicios.tipo AS servicio, consumos.costo, habitaciones.id AS habitacion, " +
             "reservas.fecha_inicio, reservas.fecha_salida " +

@@ -1,11 +1,33 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class RFC4Result {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String servicio;
     private Double costo;
     private String habitacion;
     private String fechaInicio;
     private String fechaFinal;
+
+    public RFC4Result(
+        String servicio,
+        Double costo,
+        String habitacion,
+        String fechaInicio,
+        String fechaFinal
+    ) {
+        this.servicio = servicio;
+        this.costo = costo;
+        this.habitacion = habitacion;
+        this.fechaInicio = fechaInicio;
+        this.fechaFinal = fechaFinal;
+    }
 
     public String getServicio() {
         return servicio;

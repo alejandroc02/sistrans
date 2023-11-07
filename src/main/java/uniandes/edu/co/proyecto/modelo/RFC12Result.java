@@ -1,6 +1,14 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class RFC12Result {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer numeroDocumento;
     private String nombreCliente;
     private String correoCliente;

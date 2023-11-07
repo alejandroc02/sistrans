@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import uniandes.edu.co.proyecto.modelo.Clientes;
 import uniandes.edu.co.proyecto.modelo.RFC12Result;
 
-public interface RFC12Repository extends JpaRepository<Clientes, Integer> {
+public interface RFC12Repository extends JpaRepository<RFC12Result, Integer> {
 
     @Query(value = "SELECT DISTINCT " +
             "clientes.num_documento AS numero_documento, " +

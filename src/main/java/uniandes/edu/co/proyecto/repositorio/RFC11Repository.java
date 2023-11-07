@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import uniandes.edu.co.proyecto.modelo.RFC11Result;
 import uniandes.edu.co.proyecto.modelo.Reservas;
 
-public interface RFC11Repository extends JpaRepository<Reservas, Integer> {
+public interface RFC11Repository extends JpaRepository<RFC11Result, String> {
 
     @Query(value = "SELECT TO_CHAR(reservas.fecha_inicio, 'IYYY-IW') AS semana, " +
             "MAX(servicios.tipo) AS servicio_mas_consumido, " +

@@ -8,7 +8,7 @@ import java.util.Collection;
 RFC1 - MOSTRAR EL DINERO RECOLECTADO POR SERVICIOS EN CADA 
 HABITACIÓN EN EL ÚLTIMO AÑO CORRIDO. 
 */
-public interface RFC1Repository extends JpaRepository<RFC1Result, Integer> {
+public interface RFC1Repository extends JpaRepository<RFC1Result, Long> {
 
     @Query(value = "SELECT habitaciones.id as habitacion_id, servicios.tipo as servicio, SUM(consumos.costo) as dinero_recolectado " +
             "FROM consumos " +

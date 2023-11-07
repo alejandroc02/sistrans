@@ -39,7 +39,7 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
 
     @Modifying
     @Transactional
-    @Query(value = "DELET FROM habitaciones WHERE id=:id",nativeQuery=true)
+    @Query(value = "DELETE FROM habitaciones WHERE id = :id", nativeQuery = true)
     void eliminarHabitacion(@Param("id") Integer id);
 
     //seleccionar tipo
@@ -49,7 +49,8 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
     //eliminar, modificar/ insertar tipo de habitacion
     @Modifying
     @Transactional
-    @Query(value="UPDATE habitaciones SET tipohab_id_tipo=:tipohab_id_tipo  WHERE id=:id" )
-    void actualizarTipoHabitacion(@Param("id") int id,@Param("tipohab_id_tipo") Tipohab tiposHabitacion);
+    @Query(value = "UPDATE habitaciones SET tipohab_id_tipo = :tipohab_id_tipo WHERE id = :id", nativeQuery = true)
+    void actualizarTipoHabitacion(@Param("id") Integer id, @Param("tipohab_id_tipo") Tipohab tiposHabitacion);
+    
 
 }

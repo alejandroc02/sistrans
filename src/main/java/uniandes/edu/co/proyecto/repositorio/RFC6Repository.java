@@ -5,9 +5,10 @@ import org.springframework.data.jpa.repository.Query;
 
 import uniandes.edu.co.proyecto.modelo.RFC6Result;
 
+import java.sql.Date;
 import java.util.Collection;
 
-public interface RFC6Repository extends JpaRepository<Object[], Integer> {
+public interface RFC6Repository extends JpaRepository<RFC6Result, Date> {
 
     @Query(value = "SELECT checkin.fecha_ingreso AS fecha, " +
             "COUNT(distinct checkin.reservas_id) AS habitaciones_ocupadas " +

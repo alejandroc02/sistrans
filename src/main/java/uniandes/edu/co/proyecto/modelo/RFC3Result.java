@@ -1,11 +1,35 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class RFC3Result {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long habitacionId;
     private Long capacidadHabitacion;
     private Long totalReservas;
     private Long totalDiasOcupados;
     private Double porcentajeOcupacion;
+
+
+    public RFC3Result(
+        Long habitacionId,
+        Long capacidadHabitacion,
+        Long totalReservas,
+        Long totalDiasOcupados,
+        Double porcentajeOcupacion
+    ) {
+        this.habitacionId = habitacionId;
+        this.capacidadHabitacion = capacidadHabitacion;
+        this.totalReservas = totalReservas;
+        this.totalDiasOcupados = totalDiasOcupados;
+        this.porcentajeOcupacion = porcentajeOcupacion;
+    }
 
     public Long getHabitacionId() {
         return habitacionId;

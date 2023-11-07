@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import uniandes.edu.co.proyecto.modelo.Clientes;
 import uniandes.edu.co.proyecto.modelo.RFC7Result;
 
-public interface RFC7Repository extends JpaRepository<Clientes, Integer> {
+public interface RFC7Repository extends JpaRepository<RFC7Result, String> {
 
     @Query(value = "SELECT " +
             "clientes.nombre AS nombre_cliente, " +

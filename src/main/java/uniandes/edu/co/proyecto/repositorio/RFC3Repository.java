@@ -9,7 +9,7 @@ import java.util.Collection;
  * MOSTRAR EL ÍNDICE DE OCUPACIÓN DE CADA UNA DE LAS 
  * HABITACIONES DEL HOTEL
  */
-public interface RFC3Repository extends JpaRepository<RFC3Result, Integer> {
+public interface RFC3Repository extends JpaRepository<RFC3Result, Long> {
 
     @Query(value = "SELECT habitaciones.id AS habitacionId, " +
             "habitaciones.capacidad AS capacidadHabitacion, " +

@@ -18,7 +18,7 @@ public class RFC1Controller {
     @Autowired
     private RFC1Repository rfc1Repository;
 
-    @GetMapping("/rfc1")
+    @GetMapping("/rfc1")   
     public String rfc1(Model model) {
         long tiempoInicio = System.nanoTime();
         Collection<RFC1Result> rta = rfc1Repository.dineroServiciosHabitacionUltimoAño();

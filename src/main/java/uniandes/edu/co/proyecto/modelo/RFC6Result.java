@@ -2,7 +2,15 @@ package uniandes.edu.co.proyecto.modelo;
 
 import java.util.Date;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class RFC6Result {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Date fecha;
     private Long habitacionesOcupadas;
     private long ingresos;

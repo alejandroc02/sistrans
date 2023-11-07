@@ -8,7 +8,7 @@ import uniandes.edu.co.proyecto.modelo.RFC5Result;
 
 import java.util.Collection;
 
-public interface RFC5Repository extends JpaRepository<Object[], Integer> {
+public interface RFC5Repository extends JpaRepository<RFC5Result, String> {
 
     @Query(value = "SELECT clientes.nombre AS nombre_cliente, " +
             "reservas.id AS reserva_id, " +
