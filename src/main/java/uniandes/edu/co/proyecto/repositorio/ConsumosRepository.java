@@ -20,7 +20,7 @@ public interface ConsumosRepository extends JpaRepository<Consumos, Integer> {
 
     // Obtener un consumo por habitacion_id y servicios_tipo
     @Query(value = "SELECT * FROM consumos WHERE habitacion_id = :habitacion_id AND servicios_tipo = :servicios_tipo", nativeQuery = true)
-    Consumos darConsumoPorHabitacionYServicio(@Param("habitacion_id") Integer habitacionId, @Param("servicios_tipo") String serviciosTipo);
+    Consumos darConsumoPorHabitacionYServicio(@Param("habitacion_id") int i, @Param("servicios_tipo") String string);
 
     // Insertar un nuevo consumo
     @Modifying
@@ -32,11 +32,11 @@ public interface ConsumosRepository extends JpaRepository<Consumos, Integer> {
     @Modifying
     @Transactional
     @Query(value = "UPDATE consumos SET descripcion = :descripcion, costo = :costo WHERE habitacion_id = :habitacion_id AND servicios_tipo = :servicios_tipo", nativeQuery = true)
-    void actualizarConsumo(@Param("habitacion_id") Integer habitacionId, @Param("servicios_tipo") String serviciosTipo, @Param("descripcion") String descripcion, @Param("costo") Number costo);
+    void actualizarConsumo(@Param("habitacion_id") int i, @Param("servicios_tipo") String string, @Param("descripcion") String descripcion, @Param("costo") Number costo);
 
     // Eliminar un consumo por habitacion_id y servicios_tipo
     @Modifying
     @Transactional
     @Query(value = "DELETE FROM consumos WHERE habitacion_id = :habitacion_id AND servicios_tipo = :servicios_tipo", nativeQuery = true)
-    void eliminarConsumo(@Param("habitacion_id") Integer habitacionId, @Param("servicios_tipo") String serviciosTipo);
+    void eliminarConsumo(@Param("habitacion_id") int i, @Param("servicios_tipo") String string);
 }

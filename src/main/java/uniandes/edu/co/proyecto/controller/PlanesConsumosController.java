@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import uniandes.edu.co.proyecto.modelo.Consumos;
+import uniandes.edu.co.proyecto.modelo.Habitacion;
+import uniandes.edu.co.proyecto.modelo.Servicios;
 import uniandes.edu.co.proyecto.repositorio.ConsumosRepository;
 
 public class PlanesConsumosController {
@@ -25,13 +27,13 @@ public class PlanesConsumosController {
 
    @PostMapping("/consumos/new/save")
    public String consumoGuardar(@ModelAttribute Consumos consumo) {
-       consumosRepository.insertarConsumo(consumo.getPk(), consumo.getPk().getServicios_tipo(), consumo.getDescripcion(), consumo.getCosto());//tipos
+       consumosRepository.insertarConsumo(consumo.getPk().getHabitacion_id(), consumo.getPk().getServicios_tipo(), consumo.getDescripcion(), consumo.getCosto());//tipos
       return "redirect/consumos";
    }
 //
     @GetMapping("/consumos/{habitacionId}/{serviciosTipo}/edit")
-    public String consumoEditarForm(@PathVariable("habitacionId") int habitacionId, @PathVariable("serviciosTipo") String serviciosTipo, Model model) {
-        Consumos consumo = consumosRepository.darConsumoPorHabitacionYServicio(habitacionId, serviciosTipo);
+    public String consumoEditarForm(@PathVariable("habitacionId") Habitacion habitacionId, @PathVariable("serviciosTipo") Servicios serviciosTipo, Model model) {
+        Consumos consumo = consumosRepository.darConsumoPorHabitacionYServicio(habitacionId.getId(), serviciosTipo.getTipo());
         if (consumo != null) {
             model.addAttribute("consumo", consumo);
             return "Consumo editado";
@@ -41,14 +43,14 @@ public class PlanesConsumosController {
     }
 
     @PostMapping("/consumos/{habitacionId}/{serviciosTipo}/edit/save")
-    public String consumoEditarGuardar(@PathVariable("habitacionId") int habitacionId, @PathVariable("serviciosTipo") String serviciosTipo, @ModelAttribute Consumos consumo) {
-        consumosRepository.actualizarConsumo(habitacionId, serviciosTipo, consumo.getDescripcion(), consumo.getCosto());
+    public String consumoEditarGuardar(@PathVariable("habitacionId") Habitacion habitacionId, @PathVariable("serviciosTipo") Servicios serviciosTipo, @ModelAttribute Consumos consumo) {
+        consumosRepository.actualizarConsumo(habitacionId.getId(), serviciosTipo.getTipo(), consumo.getDescripcion(), consumo.getCosto());
         return "redirect/consumos";
     }
 
     @PostMapping("/consumos/{habitacionId}/{serviciosTipo}/delete")
-    public String consumoEliminar(@PathVariable("habitacionId") int habitacionId, @PathVariable("serviciosTipo") String serviciosTipo) {
-        consumosRepository.eliminarConsumo(habitacionId, serviciosTipo);
+    public String consumoEliminar(@PathVariable("habitacionId") Habitacion habitacionId, @PathVariable("serviciosTipo") Servicios serviciosTipo) {
+        consumosRepository.eliminarConsumo(habitacionId.getId(), serviciosTipo.getTipo());
         return "redirect:/consumos";
     }
 }

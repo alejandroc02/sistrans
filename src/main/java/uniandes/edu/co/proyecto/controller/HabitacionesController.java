@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.proyecto.modelo.Habitacion;
+import uniandes.edu.co.proyecto.modelo.Tipohab;
 import uniandes.edu.co.proyecto.repositorio.HabitacionRepository;
 
 public class HabitacionesController {
@@ -20,6 +21,8 @@ public class HabitacionesController {
     public String habitaciones(Model model){
         model.addAttribute("Habitaciones", habitacionRepository.darHabitaciones());
         return "habitacion"; // este es un place holder
+
+
     }
 
     @GetMapping("/habitaciones/new")
@@ -35,7 +38,7 @@ public class HabitacionesController {
     }
 
     @GetMapping("/habitaciones/{id}/edit")
-    public String habitacionEditarForm(@PathVariable("id") int id,Model model){
+    public String habitacionEditarForm(@PathVariable("id") Integer id,Model model){
         Habitacion habitacion= habitacionRepository.darHabitacion(id);
         if(habitacion != null){
             model.addAttribute("habitacion", habitacion);
@@ -46,15 +49,18 @@ public class HabitacionesController {
     }
 
     @PostMapping("/habitaciones/{id}/edit/save")
-    public String habitacionEditarGuardar(@PathVariable("id") int id,@ModelAttribute Habitacion habitacion){
+    public String habitacionEditarGuardar(@PathVariable("id") Integer id,@ModelAttribute Habitacion habitacion){
 
         habitacionRepository.actualizarHabitacion(id,habitacion.getCapacidad(), habitacion.getCosto(),habitacion.getTipohab_tipo());
         return "redirect/habitaciones";
     }
 
     @PostMapping("/habitaciones/{id}/delete")
-    public String habitacionEliminar(@PathVariable("id") int id){
+    public String habitacionEliminar(@PathVariable("id") Integer id){
         habitacionRepository.eliminarHabitacion(id);
         return "redirect:/habitaciones";
     }
+
+    //gettipohab
+
 }

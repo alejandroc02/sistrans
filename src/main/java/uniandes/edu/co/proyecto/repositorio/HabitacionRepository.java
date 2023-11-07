@@ -21,7 +21,7 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
 
     //Obtener una habtiacion con id especifico
     @Query(value = "SELECT * FROM HABITACIONES WHERE id=:id",nativeQuery = true)
-    Habitacion darHabitacion (@Param("id") int id);
+    Habitacion darHabitacion (@Param("id") Integer id);
 
 
     //insertar Habitacion
@@ -44,7 +44,7 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>
 
     //seleccionar tipo
     @Query(value="SELECT tipohab_id_tipo FROM habitaciones WHERE id=:id",nativeQuery=true)
-    void darTipoHabitacion(@Param("id") int id);
+    Habitacion darTipoHabitacion(@Param("id") Integer id);
 
     //eliminar, modificar/ insertar tipo de habitacion
     @Modifying
