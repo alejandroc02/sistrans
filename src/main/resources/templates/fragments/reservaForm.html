@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fragmento</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+
+</head>
+<body>
+    
+</br>
+    <div th:fragment="reservasForm(titulo)" class="container border border-2 w-60">    
+        <h1 class="text-center" th:text="${titulo}"></h1>
+    <form>
+        <label class="col-form-label" >Id reserva</label>
+        <input class="form-control" type="number" id="id" name="id" required th:value="${reservas.id}" />
+        <label class="col-form-label" >Fecha inicio</label>
+        <input class="form-control" type="date" id="fecha_inicio" name="fecha_inicio" required th:value="${reservas.fecha_inicio}" />
+        <label  class="col-form-label">Fecha salida</label>
+        <input class="form-control" type="date" id="fecha_salida" name="fecha_salida" required th:value="${reservas.fecha_salida}" />
+        <label  class="col-form-label">Cantidad personas</label>
+        <input class="form-control" type="number" id="num_personas" name="num_personas" required th:value="${reservas.num_personas}" />
+
+        <label class="col-form-label" for="planesconsumo_id">Id plan consumo</label>
+        <select class="form-control" id="planesconsumo_id" name="planesconsumo_id" required>
+            <th:block th:each="planConsumo : ${planes_consumo}">   
+                <option th:value="${planConsumo.id}" th:text="${planConsumo.id}" ></option>
+            </th:block>
+        </select>
+        <label class="col-form-label" for="usuarios_num_documento">Numero documento usuario</label>
+        <select class="form-control" id="usuarios_num_documento" name="usuarios_num_documento" required>
+            <th:block th:each="usario : ${usuarios}">   
+                <option th:value="${usario.id}" th:text="${usario.id}" ></option>
+            </th:block>
+        </select>
+        <div class="text-center">
+        <input type="submit" value="Guardar" class="btn btn-primary">
+        <a th:href="@{/reservas}" class="btn btn-primary">Cancelar</a>
+        
+        </div>
+        
+    </form>
+</br>
+</div>
+
+</body>
+</html>

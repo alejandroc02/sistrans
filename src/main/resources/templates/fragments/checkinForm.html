@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fragmento</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+
+</head>
+<body>
+    
+</br>
+    <div th:fragment="checkinForm(titulo)" class="container border border-2 w-60">    
+        <h1 class="text-center" th:text="${titulo}"></h1>
+    <form>
+        <label class="col-form-label" for="reservas_id">Id reserva</label>
+        <select class="form-control" id="reservas_id" name="reservas_id" required>
+            <th:block th:each="reservaId : ${reservas}">   
+                <option th:value="${reservaId.id}" th:text="${reservaId.id}" ></option>
+            </th:block>
+        </select>
+        <label class="col-form-label" for="usuarios_num_documento">Numero documento usuario</label>
+        <select class="form-control" id="usuarios_num_documento" name="usuarios_num_documento" required>
+            <th:block th:each="usario : ${usuarios}">   
+                <option th:value="${usario.id}" th:text="${usario.id}" ></option>
+            </th:block>
+        </select>
+        <label class="col-form-label" >Fecha ingreso</label>
+        <input class="form-control" type="date" id="fecha_ingreso" name="fecha_ingreso" required th:value="${checkin.fecha_ingreso}" />
+     
+        <div class="text-center">
+        <input type="submit" value="Guardar" class="btn btn-primary">
+        <a th:href="@{/checkin}" class="btn btn-primary">Cancelar</a>
+        
+        </div>
+        
+    </form>
+</br>
+</div>
+
+</body>
+</html>

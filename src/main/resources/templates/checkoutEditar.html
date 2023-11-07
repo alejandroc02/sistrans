@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Editar checkins</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+
+</head>
+<body>
+<form th:action="@{'/checkout/' + ${id} + '/edit/save'}" th:object="${checkout}" method="post">
+    <div th:replace="~{fragments/checkoutForm :: checkoutForm(titulo='Editar checkout', checkout=${checkout})}">
+    </div>  
+</form>
+    
+</body>
+</html>
