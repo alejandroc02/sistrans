@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import uniandes.edu.co.proyecto.modelo.Clientes;
+import uniandes.edu.co.proyecto.modelo.RFC10Result;
+import uniandes.edu.co.proyecto.modelo.RFC11Result;
 
 public interface RFC10Repository extends JpaRepository<Clientes, Integer> {
 
@@ -18,5 +20,5 @@ public interface RFC10Repository extends JpaRepository<Clientes, Integer> {
             "WHERE reservas.fecha_inicio BETWEEN TO_DATE(:fecha_inicial, 'YYYY-MM-DD') " +
             "AND TO_DATE(:fecha_final, 'YYYY-MM-DD')) " +
             "ORDER BY nombre_cliente", nativeQuery = true)
-    Collection<Object[]> consultarConsumoHotelAndes(@Param("fecha_inicial") String fechaInicial, @Param("fecha_final") String fechaFinal);
+    Collection<RFC10Result> consultarConsumoHotelAndes(@Param("fecha_inicial") String fechaInicial, @Param("fecha_final") String fechaFinal);
 }

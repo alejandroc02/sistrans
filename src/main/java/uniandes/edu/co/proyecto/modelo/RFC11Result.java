@@ -1,0 +1,37 @@
+package uniandes.edu.co.proyecto.modelo;
+
+public class RFC11Result {
+    private String semana;
+    private String servicioMasConsumido;
+    private String servicioMenosConsumido;
+    private Integer habitacionMasSolicitada;
+    private Integer habitacionMenosSolicitada;
+
+    public RFC11Result(String semana, String servicioMasConsumido, String servicioMenosConsumido, Integer habitacionMasSolicitada, Integer habitacionMenosSolicitada) {
+        this.semana = semana;
+        this.servicioMasConsumido = servicioMasConsumido;
+        this.servicioMenosConsumido = servicioMenosConsumido;
+        this.habitacionMasSolicitada = habitacionMasSolicitada;
+        this.habitacionMenosSolicitada = habitacionMenosSolicitada;
+    }
+
+    public String getSemana() {
+        return semana;
+    }
+
+    public String getServicioMasConsumido() {
+        return servicioMasConsumido;
+    }
+
+    public String getServicioMenosConsumido() {
+        return servicioMenosConsumido;
+    }
+
+    public Integer getHabitacionMasSolicitada() {
+        return habitacionMasSolicitada;
+    }
+
+    public Integer getHabitacionMenosSolicitada() {
+        return habitacionMenosSolicitada;
+    }
+}

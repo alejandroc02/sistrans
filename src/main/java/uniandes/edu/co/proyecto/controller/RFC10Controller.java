@@ -5,6 +5,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import uniandes.edu.co.proyecto.modelo.RFC10Result;
+import uniandes.edu.co.proyecto.modelo.RFC11Result;
+import uniandes.edu.co.proyecto.modelo.RFC8Result;
 import uniandes.edu.co.proyecto.repositorio.RFC10Repository;
 
 import java.util.Collection;
@@ -21,7 +25,7 @@ public class RFC10Controller {
             @RequestParam("fecha_final") String fechaFinal,
             Model model) {
         long tiempoInicio = System.nanoTime();
-        Collection<Object[]> rta = rfc10Repository.consultarConsumoHotelAndes(fechaInicial, fechaFinal);
+        Collection<RFC10Result> rta = rfc10Repository.consultarConsumoHotelAndes(fechaInicial, fechaFinal);
         long tiempoFin = System.nanoTime();
         double tiempoEjecucion = (tiempoFin - tiempoInicio) / 1000000000.0;
         model.addAttribute("tiempo", String.format("%.3f", tiempoEjecucion));

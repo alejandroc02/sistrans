@@ -4,6 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import uniandes.edu.co.proyecto.modelo.RFC5Result;
+
 import java.util.Collection;
 
 public interface RFC5Repository extends JpaRepository<Object[], Integer> {
@@ -20,7 +22,7 @@ public interface RFC5Repository extends JpaRepository<Object[], Integer> {
             "AND TO_DATE(:fecha_final, 'YYYY-MM-DD') " +
             "GROUP BY clientes.nombre, reservas.id, reservas.fecha_inicio, reservas.fecha_salida " +
             "ORDER BY reservas.fecha_inicio", nativeQuery = true)
-    Collection<Object[]> darRespuesta(
+    Collection<RFC5Result> darRespuesta(
             @Param("id_usuario") Integer idUsuario,
             @Param("fecha_inicial") String fechaInicial,
             @Param("fecha_final") String fechaFinal

@@ -3,6 +3,8 @@ package uniandes.edu.co.proyecto.repositorio;
 import java.util.Collection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+
+import uniandes.edu.co.proyecto.modelo.RFC11Result;
 import uniandes.edu.co.proyecto.modelo.Reservas;
 
 public interface RFC11Repository extends JpaRepository<Reservas, Integer> {
@@ -21,5 +23,5 @@ public interface RFC11Repository extends JpaRepository<Reservas, Integer> {
             "AND reservas.fecha_inicio <= TO_DATE('2023-12-31', 'YYYY-MM-DD') " +
             "GROUP BY TO_CHAR(reservas.fecha_inicio, 'IYYY-IW') " +
             "ORDER BY semana", nativeQuery = true)
-    Collection<Object[]> consultarFuncionamiento();
+    Collection<RFC11Result> consultarFuncionamiento();
 }

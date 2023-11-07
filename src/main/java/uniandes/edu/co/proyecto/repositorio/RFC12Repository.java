@@ -4,6 +4,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import uniandes.edu.co.proyecto.modelo.Clientes;
+import uniandes.edu.co.proyecto.modelo.RFC12Result;
 
 public interface RFC12Repository extends JpaRepository<Clientes, Integer> {
 
@@ -24,5 +25,5 @@ public interface RFC12Repository extends JpaRepository<Clientes, Integer> {
             "OR ((consumos.servicios_tipo IN ('SPA', 'Salones de Reuniones') " +
             "AND reservas_serv.duracion_hora > 4)) " +
             "ORDER BY consumos.costo", nativeQuery = true)
-    Collection<Object[]> consultarClientesConGastosElevados();
+    Collection<RFC12Result> consultarClientesConGastosElevados();
 }
