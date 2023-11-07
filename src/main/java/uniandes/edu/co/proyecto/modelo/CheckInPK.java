@@ -1,11 +1,10 @@
 package uniandes.edu.co.proyecto.modelo;
 
-import java.io.Serializable;
-
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
-
 import jakarta.persistence.ManyToOne;
+import java.io.Serializable;
+import java.util.Objects;
 
 @Embeddable
 public class CheckInPK implements Serializable {
@@ -15,12 +14,14 @@ public class CheckInPK implements Serializable {
     private Reservas Reservas_id;
 
     @ManyToOne
-    
     @JoinColumn(name = "Usuarios_num_documento", referencedColumnName = "num_documento")
     private Clientes clientes_num_documento;
 
+    public CheckInPK() {
+        super();
+    }
 
-    public CheckInPK(Reservas reservas_id, Clientes clientes_num_documento2 ) {
+    public CheckInPK(Reservas reservas_id, Clientes clientes_num_documento2) {
         super();
         this.Reservas_id = reservas_id;
         this.clientes_num_documento = clientes_num_documento2;
@@ -40,6 +41,19 @@ public class CheckInPK implements Serializable {
 
     public void setclientesPK(Clientes clientes_num_documento) {
         this.clientes_num_documento = clientes_num_documento;
-    } 
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CheckInPK checkInPK = (CheckInPK) o;
+        return Objects.equals(Reservas_id, checkInPK.Reservas_id) &&
+               Objects.equals(clientes_num_documento, checkInPK.clientes_num_documento);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(Reservas_id, clientes_num_documento);
+    }
 }

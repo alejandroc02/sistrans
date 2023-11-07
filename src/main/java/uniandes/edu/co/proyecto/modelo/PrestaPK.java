@@ -1,18 +1,18 @@
 package uniandes.edu.co.proyecto.modelo;
 
-import java.io.Serializable;
-
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import java.io.Serializable;
+import java.util.Objects;
 
 @Embeddable
 public class PrestaPK implements Serializable {
-    
+
     @ManyToOne
     @JoinColumn(name = "ServiciosPrestamo_id", referencedColumnName = "id")
     private ServiciosPrestamo ServiciosPrestamo_id;
-    
+
     @ManyToOne
     @JoinColumn(name = "Utensilios_id", referencedColumnName = "id")
     private Utensilios Utensilios_id;
@@ -42,8 +42,17 @@ public class PrestaPK implements Serializable {
         Utensilios_id = utensilios_id;
     }
 
-    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PrestaPK prestaPK = (PrestaPK) o;
+        return Objects.equals(ServiciosPrestamo_id, prestaPK.ServiciosPrestamo_id) &&
+                Objects.equals(Utensilios_id, prestaPK.Utensilios_id);
+    }
 
-    
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(ServiciosPrestamo_id, Utensilios_id);
+    }
 }

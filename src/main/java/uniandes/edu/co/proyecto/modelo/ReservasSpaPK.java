@@ -1,10 +1,10 @@
 package uniandes.edu.co.proyecto.modelo;
 
 import java.io.Serializable;
-
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import java.util.Objects;
 
 @Embeddable
 public class ReservasSpaPK implements Serializable {
@@ -43,6 +43,16 @@ public class ReservasSpaPK implements Serializable {
         ReservasServicio_id = reservasServicio_id;
     }
 
-    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ReservasSpaPK that = (ReservasSpaPK) o;
+        return Objects.equals(Spas_id, that.Spas_id) && Objects.equals(ReservasServicio_id, that.ReservasServicio_id);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(Spas_id, ReservasServicio_id);
+    }
 }
