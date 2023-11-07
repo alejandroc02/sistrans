@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import uniandes.edu.co.proyecto.modelo.RFC10Result;
-import uniandes.edu.co.proyecto.modelo.RFC11Result;
-import uniandes.edu.co.proyecto.modelo.RFC8Result;
 import uniandes.edu.co.proyecto.repositorio.RFC10Repository;
 
 import java.util.Collection;

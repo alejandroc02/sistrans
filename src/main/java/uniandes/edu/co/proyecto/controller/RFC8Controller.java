@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import uniandes.edu.co.proyecto.modelo.RFC6Result;
 import uniandes.edu.co.proyecto.modelo.RFC8Result;
 import uniandes.edu.co.proyecto.repositorio.RFC8Repository;
 

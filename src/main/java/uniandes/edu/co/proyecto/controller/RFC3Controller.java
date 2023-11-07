@@ -19,7 +19,7 @@ public class RFC3Controller {
     @GetMapping("/rfc3")
     public String rfc3(Model model) {
         long tiempoInicio = System.nanoTime();
-        Collection<RFC3Result> rta = rfc3Repository.darRespuesta();
+        Collection<RFC3Result> rta = rfc3Repository.indiceOcupacionHabitacionesHotel();
         long tiempoFin = System.nanoTime();
         double tiempoEjecucion = (tiempoFin - tiempoInicio) / 1000000000.0;
         model.addAttribute("tiempo", String.format("%.3f", tiempoEjecucion));

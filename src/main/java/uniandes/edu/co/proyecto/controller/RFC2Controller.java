@@ -10,7 +10,9 @@ import uniandes.edu.co.proyecto.modelo.RFC2Result;
 import uniandes.edu.co.proyecto.repositorio.RFC2Repository;
 
 import java.util.Collection;
-
+/*
+    RFC2: MOSTRAR LOS 20 SERVICIOS MÁS POPULARES.
+*/
 @Controller
 public class RFC2Controller {
 
@@ -20,7 +22,7 @@ public class RFC2Controller {
     @GetMapping("/rfc2")
     public String rfc2(@RequestParam("fecha_inicial") String fechaInicial, @RequestParam("fecha_final") String fechaFinal, Model model) {
         long tiempoInicio = System.nanoTime();
-        Collection<RFC2Result> rta = rfc2Repository.darRespuesta(fechaInicial, fechaFinal);
+        Collection<RFC2Result> rta = rfc2Repository.ServiciosMasPopulares(fechaInicial, fechaFinal);
         long tiempoFin = System.nanoTime();
         double tiempoEjecucion = (tiempoFin - tiempoInicio) / 1000000000.0;
         model.addAttribute("tiempo", String.format("%.3f", tiempoEjecucion));

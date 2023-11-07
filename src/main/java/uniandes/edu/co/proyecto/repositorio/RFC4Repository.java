@@ -6,7 +6,9 @@ import org.springframework.data.repository.query.Param;
 import uniandes.edu.co.proyecto.modelo.RFC4Result;
 
 import java.util.Collection;
-
+/* 
+ * MOSTRAR LOS SERVICIOS QUE CUMPLEN CON CIERTA CARACTERÍSTICA
+ */
 public interface RFC4Repository extends JpaRepository<RFC4Result, Integer> {
 
     @Query(value = "SELECT servicios.tipo AS servicio, consumos.costo, habitaciones.id AS habitacion, " +
@@ -19,7 +21,7 @@ public interface RFC4Repository extends JpaRepository<RFC4Result, Integer> {
             "WHERE consumos.costo BETWEEN :costo_minimo AND :costo_maximo " +
             "AND reservas.fecha_inicio BETWEEN TO_DATE(:fecha_inicial, 'YYYY-MM-DD') AND TO_DATE(:fecha_final, 'YYYY-MM-DD') " +
             "AND servicios.tipo = :tipo_servicio", nativeQuery = true)
-    Collection<RFC4Result> darRespuesta(
+    Collection<RFC4Result> darServicioCiertaCaracteristica(
             @Param("costo_minimo") Double costoMinimo,
             @Param("costo_maximo") Double costoMaximo,
             @Param("fecha_inicial") String fechaInicial,

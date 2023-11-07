@@ -5,7 +5,10 @@ import org.springframework.data.jpa.repository.Query;
 import uniandes.edu.co.proyecto.modelo.RFC3Result;
 
 import java.util.Collection;
-
+/* 
+ * MOSTRAR EL ÍNDICE DE OCUPACIÓN DE CADA UNA DE LAS 
+ * HABITACIONES DEL HOTEL
+ */
 public interface RFC3Repository extends JpaRepository<RFC3Result, Integer> {
 
     @Query(value = "SELECT habitaciones.id AS habitacionId, " +
@@ -21,5 +24,5 @@ public interface RFC3Repository extends JpaRepository<RFC3Result, Integer> {
             "AND reservas.fecha_salida BETWEEN TO_DATE('2023-01-01', 'YYYY-MM-DD') " +
             "AND TO_DATE('2023-12-31', 'YYYY-MM-DD') " +
             "GROUP BY habitaciones.id, habitaciones.capacidad", nativeQuery = true)
-    Collection<RFC3Result> darRespuesta();
+    Collection<RFC3Result> indiceOcupacionHabitacionesHotel();
 }

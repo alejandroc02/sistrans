@@ -9,6 +9,9 @@
 <body>
     <div>
         <h1>Lista de habitacionnes</h1>
+        <p>El dinero recoletado por los servicios en cada habitación en el ultimo año corrido es de $<span th:text="${dineroServiciosHabitacionUltimoAño}"></span></p>
+        <p>Los 20 servicios más populares son: <span th:text="${ServiciosMasPopulares}"></span></p>
+        <p>Servicio con cierta caracteristica: <span th:text="${darServicioCiertaCaracteristica}"></span></p>
         <table class="table table-hover table-bordered">
             <thead class="thead-dark">
                 <tr>
