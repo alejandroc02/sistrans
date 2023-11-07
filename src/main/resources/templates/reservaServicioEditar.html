@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Editar planes consumo</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+
+</head>
+<body>
+<form th:action="@{'/reservas_serv/' + ${id} + '/edit/save'}" th:object="${reservaServicio}" method="post">
+    <div th:replace="~{fragments/reservaServicioForm :: reservaServicioForm(titulo='Editar reserva de un servicio', reservaServicio=${reservaServicio})}">
+    </div>  
+</form>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fragmento</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+
+</head>
+<body>
+    
+</br>
+    <div th:fragment="consumosForm(titulo)" class="container border border-2 w-60">    
+        <h1 class="text-center" th:text="${titulo}"></h1>
+    <form>
+        <label class="col-form-label" for="habitacion_id">Id habitacion</label>
+        <select class="form-control" id="habitacion_id" name="habitacion_id" required>
+            <th:block th:each="habitacion : ${habitaciones}">   
+                <option th:value="${habitacion.id}" th:text="${habitacion.id}" ></option>
+            </th:block>
+        </select>
+        <label class="col-form-label" for="servicios_tipo">Tipo de servicio</label>
+        <select class="form-control" id="servicios_tipo" name="servicios_tipo" required>
+            <th:block th:each="servicio : ${usuarios}">   
+                <option th:value="${servicio.tipo}" th:text="${servicio.tipo}" ></option>
+            </th:block>
+        </select>
+        <label class="col-form-label" >Descripcion</label>
+        <input class="form-control" type="text" id="descripcion" name="descripcion" required th:value="${consumos.descripcion}" />
+        <label class="col-form-label" >Costo</label>
+        <input class="form-control" type="number" id="costo" name="costo" required th:value="${consumos.costo}" />
+     
+        <div class="text-center">
+        <input type="submit" value="Guardar" class="btn btn-primary">
+        <a th:href="@{/consumos}" class="btn btn-primary">Cancelar</a>
+        
+        </div>
+        
+    </form>
+</br>
+</div>
+
+</body>
+</html>
