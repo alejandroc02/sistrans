@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import uniandes.edu.co.proyecto.modelo.RFC2Result;
 import uniandes.edu.co.proyecto.repositorio.RFC2Repository;
 
 import java.util.Collection;
@@ -18,7 +20,7 @@ public class RFC2Controller {
     @GetMapping("/rfc2")
     public String rfc2(@RequestParam("fecha_inicial") String fechaInicial, @RequestParam("fecha_final") String fechaFinal, Model model) {
         long tiempoInicio = System.nanoTime();
-        Collection<Object[]> rta = rfc2Repository.darRespuesta(fechaInicial, fechaFinal);
+        Collection<RFC2Result> rta = rfc2Repository.darRespuesta(fechaInicial, fechaFinal);
         long tiempoFin = System.nanoTime();
         double tiempoEjecucion = (tiempoFin - tiempoInicio) / 1000000000.0;
         model.addAttribute("tiempo", String.format("%.3f", tiempoEjecucion));

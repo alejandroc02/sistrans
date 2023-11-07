@@ -47,6 +47,6 @@ public interface UsuarioRepository extends JpaRepository<Usuarios, String> {
     //eliminar, modificar/ insertar tipo de habitacion
     @Modifying
     @Transactional
-    @Query(value="UPDATE usuarios SET tiposusuario_tipo:=tiposusuario_tipo  WHERE id=:id" )
+    @Query(value="UPDATE usuarios SET tiposusuario_tipo=:tiposusuario_tipo  WHERE id=:id" )
     void actualizarTipoHabitacion(@Param("id") int id,@Param("tiposusuario_tipo") Tipohab tiposHabitacion);
 }
