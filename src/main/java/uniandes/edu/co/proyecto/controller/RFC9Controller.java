@@ -1,5 +1,5 @@
 package uniandes.edu.co.proyecto.controller;
 
-public class RF6Controller {
+public class RFC9Controller {
     
 }
