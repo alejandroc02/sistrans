@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import java.util.Objects;
 
 @Entity
 @Table(name = "internets")
@@ -30,7 +31,7 @@ public class Internets {
         this.Servicios_tipo = servicios_tipo;
         this.capacidad = capacidad;
         this.costo_dia = costo_dia;
-    }
+}
 
     public Servicios getServicios_tipo() {
         return Servicios_tipo;
@@ -64,7 +65,17 @@ public class Internets {
         return costo_dia;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Internets internets = (Internets) o;
+        return id == internets.id && Objects.equals(Servicios_tipo, internets.Servicios_tipo);
+    }
 
-    
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, Servicios_tipo);
+    }
 
 }

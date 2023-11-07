@@ -1,10 +1,10 @@
 package uniandes.edu.co.proyecto.modelo;
 
-import java.io.Serializable;
-
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import java.io.Serializable;
+import java.util.Objects;
 
 @Embeddable
 public class CheckOutsPK implements Serializable {
@@ -12,7 +12,7 @@ public class CheckOutsPK implements Serializable {
     @ManyToOne
     @JoinColumn(name = "Reservas_id", referencedColumnName = "id")
     private Reservas Reservas_id;
-    
+
     @ManyToOne
     @JoinColumn(name = "Habitaciones_id", referencedColumnName = "id")
     private Habitacion Habitacion_id;
@@ -22,7 +22,7 @@ public class CheckOutsPK implements Serializable {
         Reservas_id = reservas_id;
         Habitacion_id = habitacion_id;
     }
-    
+
     public CheckOutsPK() {
         super();
     }
@@ -43,6 +43,17 @@ public class CheckOutsPK implements Serializable {
         Habitacion_id = habitacion_id;
     }
 
-    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CheckOutsPK that = (CheckOutsPK) o;
+        return Objects.equals(Reservas_id, that.Reservas_id) &&
+                Objects.equals(Habitacion_id, that.Habitacion_id);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(Reservas_id, Habitacion_id);
+    }
 }

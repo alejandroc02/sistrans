@@ -7,14 +7,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import java.util.Objects;
 
 @Entity
 @Table(name = "conferencia")
 public class Conferencia {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    
+    @GeneratedValue(strategy = GenerationType.AUTO)
 
     @ManyToOne
     @JoinColumn(name = "Servicios", referencedColumnName = "tipo")
@@ -24,10 +24,9 @@ public class Conferencia {
     private int capacidad;
     private double costo_hora;
 
-
     public Conferencia(int id, Servicios servicios, int capacidad, double costo_hora) {
         this.id = id;
-        this.Servicios= servicios;
+        this.Servicios = servicios;
         this.capacidad = capacidad;
         this.costo_hora = costo_hora;
     }
@@ -68,7 +67,19 @@ public class Conferencia {
         ;
     }
 
-    
-    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Conferencia that = (Conferencia) o;
+        return id == that.id &&
+                capacidad == that.capacidad &&
+                Double.compare(that.costo_hora, costo_hora) == 0 &&
+                Objects.equals(Servicios, that.Servicios);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(Servicios, id, capacidad, costo_hora);
+    }
 }

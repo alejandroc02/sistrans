@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.proyecto.modelo.Habitacion;
-import uniandes.edu.co.proyecto.modelo.Tipohab;
 import uniandes.edu.co.proyecto.repositorio.HabitacionRepository;
 
 public class HabitacionesController {
