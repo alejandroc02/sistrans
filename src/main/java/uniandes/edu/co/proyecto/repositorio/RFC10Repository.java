@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import uniandes.edu.co.proyecto.modelo.Clientes;
 import uniandes.edu.co.proyecto.modelo.RFC10Result;
-import uniandes.edu.co.proyecto.modelo.RFC11Result;
 
 public interface RFC10Repository extends JpaRepository<Clientes, Integer> {
 
