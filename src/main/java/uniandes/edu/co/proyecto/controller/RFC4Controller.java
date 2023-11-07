@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import uniandes.edu.co.proyecto.modelo.RFC4Result;
 import uniandes.edu.co.proyecto.repositorio.RFC4Repository;
 
 import java.util.Collection;
@@ -24,7 +26,7 @@ public class RFC4Controller {
             @RequestParam("tipo_servicio") String tipoServicio,
             Model model) {
         long tiempoInicio = System.nanoTime();
-        Collection<Object[]> rta = rfc4Repository.darRespuesta(costoMinimo, costoMaximo, fechaInicial, fechaFinal, tipoServicio);
+        Collection<RFC4Result> rta = rfc4Repository.darRespuesta(costoMinimo, costoMaximo, fechaInicial, fechaFinal, tipoServicio);
         long tiempoFin = System.nanoTime();
         double tiempoEjecucion = (tiempoFin - tiempoInicio) / 1000000000.0;
         model.addAttribute("tiempo", String.format("%.3f", tiempoEjecucion));
