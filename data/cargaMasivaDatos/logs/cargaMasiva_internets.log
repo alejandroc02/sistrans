@@ -1,10 +1,206 @@
 
-SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 03:42:01 2023
+SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 03:44:45 2023
 Version 21.3.0.0.0
 
 Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
 
-SQL*Loader-350: Error de sintaxis en la línea 11.
-Se espera nombre de campo, se ha encontrado ")".
-)
-^
+Archivo de Control:   data/cargaMasivaDatos/ctl/cargaMasiva_internets.ctl
+Archivo de Datos:      data\cargaMasivaDatos\csv\data_internets.csv
+  Archivo de Errores:     data/cargaMasivaDatos/ctl/data_internets.bad
+  Desechar Archivo:  ninguno especificado
+ 
+ (Permitir todos los registros desechados)
+
+Número a cargar: ALL
+Número que omitir: 0
+Errores permitidos: 50
+Matriz de enlace:     250 filas, máximo de 1048576 bytes
+Continuación:    ninguno especificado
+Ruta de acceso utilizada:      Convencional
+
+Tabla INTERNETS, cargada de cada registro lógico.
+Opción INSERT activa para esta tabla: APPEND
+
+   Nombre Columna                  Posición   Long  Term Entorno Tipo de Dato
+------------------------------ ---------- ----- ---- ---- ---------------------
+ID                                  FIRST     *   ,       CHARACTER            
+CAPACIDAD                            NEXT     *   ,       CHARACTER            
+COSTO_DIA                            NEXT     *   ,       CHARACTER            
+SERVICIOS_TIPO                       NEXT     *   ,       CHARACTER            
+
+Registro 1: Rechazado - Error en tabla INTERNETS, columna ID.
+ORA-01722: número no válido
+
+Registro 2: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 3: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 4: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 5: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 6: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 7: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 8: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 9: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 10: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 11: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 12: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 13: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 14: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 15: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 16: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 17: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 18: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 19: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 20: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 21: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 22: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 23: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 24: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 25: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 26: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 27: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 28: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 29: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 30: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 31: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 32: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 33: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 34: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 35: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 36: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 37: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 38: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 39: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 40: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 41: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 42: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 43: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 44: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 45: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 46: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 47: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 48: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 49: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 50: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+Registro 51: Rechazado - Error en tabla INTERNETS.
+ORA-00001: restricción única (ISIS2304C15202320.INTERNETS_PK) violada
+
+
+MÁXIMO DE ERRORES EXCEDIDO - Las estadísticas anteriores reflejan una ejecución parcial.
+
+Tabla INTERNETS:
+  0 Filas cargadas correctamente.
+  51 Filas no cargadas debido a errores de datos.
+  0 Filas no cargadas porque todas las cláusulas WHEN han fallado.
+  0 Filas no cargadas porque todos los campos eran nulos.
+
+
+Espacio asignado a matriz de enlace:           258000 bytes (250 filas)
+Bytes de buffer de lectura: 1048576
+
+Total de registros lógicos omitidos:          0
+Total de registros lógicos leídos:         100
+Total de registros lógicos rechazados:        51
+Total de registros lógicos desechados:        0
+
+La ejecución empezó en Mié Nov 08 03:44:45 2023
+La ejecución terminó en Mié Nov 08 03:44:47 2023
+
+Tiempo transcurrido:     00:00:01.36
+Tiempo de CPU:         00:00:00.00

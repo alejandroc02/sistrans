@@ -36,7 +36,7 @@ sqlldr ISIS2304C15202320/kZvzjffJkAUa@fn4.oracle.virtual.uniandes.edu.co:1521/PR
 sqlldr ISIS2304C15202320/kZvzjffJkAUa@fn4.oracle.virtual.uniandes.edu.co:1521/PROD control=data/cargaMasivaDatos/ctl/cargaMasiva_venden_t.ctl log=data/cargaMasivaDatos/logs/cargaMasiva_venden_t.log
 sqlldr ISIS2304C15202320/kZvzjffJkAUa@fn4.oracle.virtual.uniandes.edu.co:1521/PROD control=data/cargaMasivaDatos/ctl/cargaMasiva_prestan.ctl log=data/cargaMasivaDatos/logs/cargaMasiva_prestan.log
 sqlldr ISIS2304C15202320/kZvzjffJkAUa@fn4.oracle.virtual.uniandes.edu.co:1521/PROD control=data/cargaMasivaDatos/ctl/cargaMasiva_sirven_bares.ctl log=data/cargaMasivaDatos/logs/cargaMasiva_sirven_bares.log
-sqlldr ISIS2304C15202320/kZvzjffJkAUa@fn4.oracle.virtual.uniandes.edu.co:1521/PROD control=data/cargaMasivaDatos/ctl/cargaMasiva_sirven_res.ctl log=data/cargaMasivaDatos/logs/cargaMasiva_sirven_res.log
 sqlldr ISIS2304C15202320/kZvzjffJkAUa@fn4.oracle.virtual.uniandes.edu.co:1521/PROD control=data/cargaMasivaDatos/ctl/cargaMasiva_conferencias.ctl log=data/cargaMasivaDatos/logs/cargaMasiva_conferencias.log
 sqlldr ISIS2304C15202320/kZvzjffJkAUa@fn4.oracle.virtual.uniandes.edu.co:1521/PROD control=data/cargaMasivaDatos/ctl/cargaMasiva_reuniones.ctl log=data/cargaMasivaDatos/logs/cargaMasiva_reuniones.log
 sqlldr ISIS2304C15202320/kZvzjffJkAUa@fn4.oracle.virtual.uniandes.edu.co:1521/PROD control=data/cargaMasivaDatos/ctl/cargaMasiva_adicionales.ctl log=data/cargaMasivaDatos/logs/cargaMasiva_adicionales.log
+sqlldr ISIS2304C15202320/kZvzjffJkAUa@fn4.oracle.virtual.uniandes.edu.co:1521/PROD control=data/cargaMasivaDatos/ctl/cargaMasiva_sirven_res.ctl log=data/cargaMasivaDatos/logs/cargaMasiva_sirven_res.log
