@@ -38,7 +38,7 @@ def generar_datos_adicionales():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for reunion_id in range(1, 100):  # Genera 750,000 registros
+        for reunion_id in range(1, 100): 
             equipos_id = random.randint(equipos_id_min, equipos_id_max)
             costo = round(random.uniform(costo_min, costo_max), 2)
             writer.writerow({'reunion_id': reunion_id, 'equipos_id': equipos_id, 'costo': costo})
@@ -63,7 +63,7 @@ def generar_datos_checkin():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for reservas_id in range(1, 100):  # Genera 750,000 registros
+        for reservas_id in range(1, 400000):  # Genera 750,000 registros
             clientes_num_documento = random.randint(clientes_num_documento_min, clientes_num_documento_max)
             fecha_ingreso = generar_fecha().strftime('%Y-%m-%d')
             writer.writerow({'reservas_id': reservas_id, 'clientes_num_documento': clientes_num_documento, 'fecha_ingreso': fecha_ingreso})
@@ -82,7 +82,7 @@ def generar_datos_checkouts():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for reservas_id in range(1, 100):  # Genera 750,000 registros
+        for reservas_id in range(1, 190000):  # Genera 750,000 registros
             habitacion_id = random.randint(1, 1000)  # Asegurate de que el rango es adecuado
             fecha_salida = generar_fecha().strftime('%Y-%m-%d')
             writer.writerow({'reservas_id': reservas_id, 'habitacion_id': habitacion_id, 'fecha_salida': fecha_salida})
@@ -200,7 +200,7 @@ def generar_datos_habitaciones():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for id in range(1, 100):  # Genera 750,000 registros
+        for id in range(1, 10000):  # Genera 750,000 registros
             capacidad = random.randint(1, 10)  # Ajusta el rango de capacidad
             precio = round(random.uniform(50, 500), 2)  # Ajusta el rango de precio
             tipohab_id_tipo = random.randint(1, 100)  # Ajusta el rango de tipohab_id_tipo
@@ -386,7 +386,7 @@ def generar_datos_reservan():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for habitacion_id in range(1, 100):  # Genera 750,000 registros
+        for habitacion_id in range(1, 15000):  # Genera 750,000 registros
             reservas_id = random.randint(1, 1000)  # Asigna un ID de reserva aleatorio
             writer.writerow({'habitacion_id': habitacion_id, 'reservas_id': reservas_id})
 
@@ -401,7 +401,7 @@ def generar_datos_reservas():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for id in range(1, 100):  # Genera 750,000 registros
+        for id in range(1, 15000):  # Genera 750,000 registros
             fecha_inicio = generar_fecha().strftime('%Y-%m-%d')
             fecha_salida = (generar_fecha() + timedelta(days=random.randint(1, 30))).strftime('%Y-%m-%d')  # Fecha de salida dentro de 1 a 30 dias
             num_personas = random.randint(1, 100)
