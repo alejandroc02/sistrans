@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import uniandes.edu.co.proyecto.modelo.RFC11Result;
-import uniandes.edu.co.proyecto.modelo.Reservas;
 
 public interface RFC11Repository extends JpaRepository<RFC11Result, String> {
 

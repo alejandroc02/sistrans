@@ -5,9 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.fasterxml.jackson.annotation.ObjectIdGenerators.StringIdGenerator;
-
-import uniandes.edu.co.proyecto.modelo.Clientes;
 import uniandes.edu.co.proyecto.modelo.RFC10Result;
 
 public interface RFC10Repository extends JpaRepository<RFC10Result, String> {

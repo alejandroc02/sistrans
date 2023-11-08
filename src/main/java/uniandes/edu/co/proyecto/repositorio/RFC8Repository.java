@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import uniandes.edu.co.proyecto.modelo.RFC8Result;
-import uniandes.edu.co.proyecto.modelo.Servicios;
 
 public interface RFC8Repository extends JpaRepository<RFC8Result, String> {
 
