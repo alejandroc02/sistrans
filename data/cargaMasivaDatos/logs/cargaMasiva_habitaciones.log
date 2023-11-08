@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 00:21:16 2023
+SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 00:56:13 2023
 Version 21.3.0.0.0
 
 Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
@@ -40,8 +40,17 @@ ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) v
 Registro 4: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
 
+Registro 5: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
 Registro 6: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
+
+Registro 7: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
+Registro 8: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 9: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
@@ -52,14 +61,26 @@ ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) v
 Registro 11: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
 
+Registro 12: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
 Registro 13: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
+
+Registro 14: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
+Registro 15: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 16: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
 
 Registro 17: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
+
+Registro 18: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 19: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
@@ -68,10 +89,13 @@ Registro 20: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
 
 Registro 21: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 22: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
+
+Registro 23: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 24: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
@@ -82,11 +106,23 @@ ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) v
 Registro 26: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
 
+Registro 27: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
+Registro 28: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
 Registro 29: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
 
+Registro 30: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
 Registro 31: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
+
+Registro 32: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 33: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
@@ -97,8 +133,23 @@ ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) v
 Registro 35: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
 
+Registro 36: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
+Registro 37: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
+Registro 38: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
 Registro 39: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
+
+Registro 40: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
+Registro 41: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 42: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
@@ -121,71 +172,20 @@ ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) v
 Registro 48: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
 
+Registro 49: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
+
 Registro 50: Rechazado - Error en tabla HABITACIONES.
 ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
 
-Registro 52: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 53: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 54: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 57: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 58: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 60: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 61: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 64: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 66: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 68: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 70: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 71: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 72: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 75: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 76: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 77: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 81: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 82: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
-
-Registro 84: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
+Registro 51: Rechazado - Error en tabla HABITACIONES.
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 
 MÁXIMO DE ERRORES EXCEDIDO - Las estadísticas anteriores reflejan una ejecución parcial.
 
 Tabla HABITACIONES:
-  33 Filas cargadas correctamente.
+  0 Filas cargadas correctamente.
   51 Filas no cargadas debido a errores de datos.
   0 Filas no cargadas porque todas las cláusulas WHEN han fallado.
   0 Filas no cargadas porque todos los campos eran nulos.
@@ -199,8 +199,8 @@ Total de registros lógicos leídos:         100
 Total de registros lógicos rechazados:        51
 Total de registros lógicos desechados:        0
 
-La ejecución empezó en Mié Nov 08 00:21:16 2023
-La ejecución terminó en Mié Nov 08 00:21:18 2023
+La ejecución empezó en Mié Nov 08 00:56:13 2023
+La ejecución terminó en Mié Nov 08 00:56:15 2023
 
-Tiempo transcurrido:     00:00:01.84
-Tiempo de CPU:         00:00:00.03
+Tiempo transcurrido:     00:00:01.92
+Tiempo de CPU:         00:00:00.08

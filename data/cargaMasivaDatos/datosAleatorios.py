@@ -120,7 +120,7 @@ def generar_datos_conferencias():
         for id in range(1, 100):  # Genera 750,000 registros
             capacidad = random.randint(capacidad_min, capacidad_max)
             costo_hora = round(random.uniform(costo_min, costo_max), 2)
-            servicios_tipo = 'Conferencia'
+            servicios_tipo = 'salon'
             writer.writerow({'id': id, 'capacidad': capacidad, 'costo_hora': costo_hora, 'servicios_tipo': servicios_tipo})
 
 # Genera datos para la tabla "conferencias"
@@ -203,7 +203,7 @@ def generar_datos_habitaciones():
         for id in range(1, 100):  # Genera 750,000 registros
             capacidad = random.randint(1, 10)  # Ajusta el rango de capacidad
             precio = round(random.uniform(50, 500), 2)  # Ajusta el rango de precio
-            tipohab_id_tipo = random.randint(1, 10)  # Ajusta el rango de tipohab_id_tipo
+            tipohab_id_tipo = random.randint(1, 100)  # Ajusta el rango de tipohab_id_tipo
             writer.writerow({'id': id, 'capacidad': capacidad, 'precio': precio, 'tipohab_id_tipo': tipohab_id_tipo})
 
 # Genera datos para la tabla "habitaciones"
@@ -473,7 +473,7 @@ def generar_datos_reuniones():
         for id in range(1, 100):  # Genera 750,000 registros
             capacidad = random.randint(1, 100)
             costo_hora = round(random.uniform(50.0, 200.0), 2)
-            servicios_tipo = 'reunion'
+            servicios_tipo = 'salon'
             writer.writerow({'id': id, 'capacidad': capacidad, 'costo_hora': costo_hora, 'servicios_tipo': servicios_tipo})
 
 # Genera datos para la tabla "reuniones"
@@ -603,8 +603,8 @@ def generar_datos_spas(num_registros):
         for i in range(1, num_registros + 1):
             capacidad = random.randint(10, 50)  # Capacidad aleatoria entre 10 y 50
             writer.writerow({'id': i, 'capacidad': capacidad, 'servicios_tipo': servicios_tipo})
-# Genera 10 registros aleatorios para la tabla "spas"
-generar_datos_spas(10)
+# Genera 100 registros aleatorios para la tabla "spas"
+generar_datos_spas(100)
 print('Datos generados para la tabla "spas".')
 
 # Funcion para generar datos aleatorios para la tabla "supermercados"
@@ -732,8 +732,8 @@ def generar_datos_venden_super(num_registros):
             productossuper_id = random.randint(1, 5)  # Reemplaza 5 por el numero de productos disponibles en supermercados
             writer.writerow({'supermercados_id': supermercados_id, 'productossuper_id': productossuper_id})
 
-# Genera 10 registros aleatorios para la tabla "venden_super"
-generar_datos_venden_super(10)
+# Genera 100 registros aleatorios para la tabla "venden_super"
+generar_datos_venden_super(100)
 print('Datos generados para la tabla "venden_super".')
 
 # Funcion para generar datos aleatorios para la tabla "venden_t"
@@ -748,8 +748,8 @@ def generar_datos_venden_t(num_registros):
             productost_id = random.randint(1, 5)  # Reemplaza 5 por el numero de productos disponibles en tiendas
             writer.writerow({'tiendas_id': tiendas_id, 'productost_id': productost_id})
 
-# Genera 10 registros aleatorios para la tabla "venden_t"
-generar_datos_venden_t(10)
+# Genera 100 registros aleatorios para la tabla "venden_t"
+generar_datos_venden_t(100)
 print('Datos generados para la tabla "venden_t".')
 
 
@@ -765,6 +765,6 @@ def generar_datos_sirven_bares(num_registros):
             productosbar_id = random.randint(1, 5)  # Reemplaza 5 por el número de productos de bares disponibles
             writer.writerow({'bares_id': bares_id, 'productosbar_id': productosbar_id})
 
-# Genera 10 registros aleatorios para la tabla "sirven_bares"
-generar_datos_sirven_bares(10)
+# Genera 100 registros aleatorios para la tabla "sirven_bares"
+generar_datos_sirven_bares(100)
 print('Datos generados para la tabla "sirven_bares".')

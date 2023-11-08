@@ -1,100 +1,100 @@
 id,capacidad,estilo,servicios_tipo
-1,118,Comida rapida,restaurante
-2,194,Gourmet,restaurante
-3,162,Comida rapida,restaurante
-4,166,Barbecue,restaurante
-5,83,Gourmet,restaurante
-6,42,Comida rapida,restaurante
-7,41,Barbecue,restaurante
-8,89,Cafeteria,restaurante
-9,107,Barbecue,restaurante
-10,12,Gourmet,restaurante
-11,82,Barbecue,restaurante
-12,139,Barbecue,restaurante
-13,127,Barbecue,restaurante
-14,45,Gourmet,restaurante
-15,4,Cafeteria,restaurante
-16,17,Buffet,restaurante
-17,78,Comida rapida,restaurante
-18,146,Buffet,restaurante
-19,137,Gourmet,restaurante
-20,19,Comida rapida,restaurante
-21,59,Barbecue,restaurante
-22,8,Cafeteria,restaurante
-23,198,Buffet,restaurante
-24,76,Comida rapida,restaurante
-25,192,Cafeteria,restaurante
-26,117,Gourmet,restaurante
-27,136,Barbecue,restaurante
-28,157,Comida rapida,restaurante
-29,138,Barbecue,restaurante
-30,58,Gourmet,restaurante
-31,137,Barbecue,restaurante
-32,107,Gourmet,restaurante
-33,103,Barbecue,restaurante
-34,18,Cafeteria,restaurante
-35,137,Gourmet,restaurante
-36,14,Cafeteria,restaurante
-37,91,Cafeteria,restaurante
-38,183,Buffet,restaurante
-39,63,Cafeteria,restaurante
-40,83,Cafeteria,restaurante
-41,166,Buffet,restaurante
-42,77,Gourmet,restaurante
-43,116,Barbecue,restaurante
-44,159,Comida rapida,restaurante
-45,18,Gourmet,restaurante
-46,171,Cafeteria,restaurante
-47,11,Buffet,restaurante
-48,10,Barbecue,restaurante
-49,92,Comida rapida,restaurante
-50,13,Comida rapida,restaurante
-51,31,Cafeteria,restaurante
-52,169,Comida rapida,restaurante
-53,25,Barbecue,restaurante
-54,44,Cafeteria,restaurante
-55,147,Buffet,restaurante
-56,183,Cafeteria,restaurante
-57,200,Cafeteria,restaurante
-58,166,Cafeteria,restaurante
-59,98,Cafeteria,restaurante
-60,26,Barbecue,restaurante
-61,145,Comida rapida,restaurante
-62,43,Gourmet,restaurante
-63,45,Gourmet,restaurante
-64,137,Cafeteria,restaurante
-65,126,Gourmet,restaurante
-66,7,Cafeteria,restaurante
-67,45,Buffet,restaurante
-68,141,Buffet,restaurante
-69,51,Barbecue,restaurante
-70,115,Comida rapida,restaurante
-71,62,Barbecue,restaurante
-72,129,Gourmet,restaurante
-73,25,Barbecue,restaurante
-74,45,Cafeteria,restaurante
-75,89,Comida rapida,restaurante
-76,93,Cafeteria,restaurante
-77,142,Buffet,restaurante
-78,24,Gourmet,restaurante
-79,158,Barbecue,restaurante
-80,68,Cafeteria,restaurante
-81,156,Barbecue,restaurante
-82,47,Comida rapida,restaurante
-83,55,Gourmet,restaurante
-84,142,Buffet,restaurante
-85,25,Cafeteria,restaurante
-86,8,Buffet,restaurante
-87,133,Gourmet,restaurante
-88,130,Buffet,restaurante
-89,101,Gourmet,restaurante
-90,173,Barbecue,restaurante
-91,175,Gourmet,restaurante
-92,155,Barbecue,restaurante
-93,63,Barbecue,restaurante
-94,185,Cafeteria,restaurante
-95,48,Buffet,restaurante
-96,190,Cafeteria,restaurante
-97,183,Comida rapida,restaurante
-98,48,Cafeteria,restaurante
-99,109,Buffet,restaurante
+1,195,Barbecue,restaurante
+2,165,Cafeteria,restaurante
+3,67,Barbecue,restaurante
+4,14,Cafeteria,restaurante
+5,162,Comida rapida,restaurante
+6,148,Barbecue,restaurante
+7,89,Barbecue,restaurante
+8,53,Comida rapida,restaurante
+9,53,Buffet,restaurante
+10,192,Buffet,restaurante
+11,33,Gourmet,restaurante
+12,68,Buffet,restaurante
+13,38,Comida rapida,restaurante
+14,106,Comida rapida,restaurante
+15,17,Cafeteria,restaurante
+16,106,Barbecue,restaurante
+17,193,Cafeteria,restaurante
+18,116,Cafeteria,restaurante
+19,178,Comida rapida,restaurante
+20,147,Barbecue,restaurante
+21,189,Buffet,restaurante
+22,60,Gourmet,restaurante
+23,157,Gourmet,restaurante
+24,165,Buffet,restaurante
+25,165,Gourmet,restaurante
+26,83,Comida rapida,restaurante
+27,73,Gourmet,restaurante
+28,10,Cafeteria,restaurante
+29,70,Gourmet,restaurante
+30,155,Cafeteria,restaurante
+31,62,Buffet,restaurante
+32,140,Cafeteria,restaurante
+33,150,Gourmet,restaurante
+34,113,Cafeteria,restaurante
+35,150,Comida rapida,restaurante
+36,49,Comida rapida,restaurante
+37,40,Barbecue,restaurante
+38,41,Buffet,restaurante
+39,22,Barbecue,restaurante
+40,27,Barbecue,restaurante
+41,117,Buffet,restaurante
+42,184,Comida rapida,restaurante
+43,31,Comida rapida,restaurante
+44,142,Cafeteria,restaurante
+45,118,Barbecue,restaurante
+46,26,Buffet,restaurante
+47,189,Cafeteria,restaurante
+48,65,Buffet,restaurante
+49,123,Gourmet,restaurante
+50,165,Barbecue,restaurante
+51,25,Gourmet,restaurante
+52,76,Buffet,restaurante
+53,92,Buffet,restaurante
+54,80,Barbecue,restaurante
+55,80,Gourmet,restaurante
+56,67,Gourmet,restaurante
+57,43,Buffet,restaurante
+58,49,Buffet,restaurante
+59,52,Comida rapida,restaurante
+60,186,Gourmet,restaurante
+61,156,Barbecue,restaurante
+62,37,Comida rapida,restaurante
+63,110,Gourmet,restaurante
+64,15,Barbecue,restaurante
+65,96,Barbecue,restaurante
+66,101,Gourmet,restaurante
+67,36,Cafeteria,restaurante
+68,197,Gourmet,restaurante
+69,16,Buffet,restaurante
+70,9,Barbecue,restaurante
+71,193,Comida rapida,restaurante
+72,63,Barbecue,restaurante
+73,48,Barbecue,restaurante
+74,57,Comida rapida,restaurante
+75,25,Comida rapida,restaurante
+76,9,Cafeteria,restaurante
+77,4,Gourmet,restaurante
+78,195,Buffet,restaurante
+79,149,Buffet,restaurante
+80,92,Buffet,restaurante
+81,5,Buffet,restaurante
+82,73,Comida rapida,restaurante
+83,180,Barbecue,restaurante
+84,166,Gourmet,restaurante
+85,144,Cafeteria,restaurante
+86,74,Cafeteria,restaurante
+87,119,Gourmet,restaurante
+88,177,Gourmet,restaurante
+89,200,Buffet,restaurante
+90,166,Buffet,restaurante
+91,80,Comida rapida,restaurante
+92,133,Cafeteria,restaurante
+93,83,Buffet,restaurante
+94,93,Barbecue,restaurante
+95,50,Buffet,restaurante
+96,133,Barbecue,restaurante
+97,43,Cafeteria,restaurante
+98,46,Barbecue,restaurante
+99,25,Barbecue,restaurante

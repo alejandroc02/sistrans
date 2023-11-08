@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 00:21:15 2023
+SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 00:56:12 2023
 Version 21.3.0.0.0
 
 Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
@@ -29,10 +29,22 @@ ID_TIPO                              NEXT     *   ,       CHARACTER
 Registro 1: Rechazado - Error en tabla TIPO_HAB, columna ID_TIPO.
 ORA-01722: número no válido
 
+Registro 2: Rechazado - Error en tabla TIPO_HAB.
+ORA-00001: restricción única (ISIS2304C15202320.TIPO_HAB_PK) violada
+
+Registro 3: Rechazado - Error en tabla TIPO_HAB.
+ORA-00001: restricción única (ISIS2304C15202320.TIPO_HAB_PK) violada
+
+Registro 4: Rechazado - Error en tabla TIPO_HAB.
+ORA-00001: restricción única (ISIS2304C15202320.TIPO_HAB_PK) violada
+
+Registro 5: Rechazado - Error en tabla TIPO_HAB.
+ORA-00001: restricción única (ISIS2304C15202320.TIPO_HAB_PK) violada
+
 
 Tabla TIPO_HAB:
-  4 Filas cargadas correctamente.
-  1 Fila no cargadas debido a errores de datos.
+  0 Filas cargadas correctamente.
+  5 Filas no cargadas debido a errores de datos.
   0 Filas no cargadas porque todas las cláusulas WHEN han fallado.
   0 Filas no cargadas porque todos los campos eran nulos.
 
@@ -42,11 +54,11 @@ Bytes de buffer de lectura: 1048576
 
 Total de registros lógicos omitidos:          0
 Total de registros lógicos leídos:           5
-Total de registros lógicos rechazados:         1
+Total de registros lógicos rechazados:         5
 Total de registros lógicos desechados:        0
 
-La ejecución empezó en Mié Nov 08 00:21:15 2023
-La ejecución terminó en Mié Nov 08 00:21:16 2023
+La ejecución empezó en Mié Nov 08 00:56:12 2023
+La ejecución terminó en Mié Nov 08 00:56:13 2023
 
-Tiempo transcurrido:     00:00:00.86
-Tiempo de CPU:         00:00:00.10
+Tiempo transcurrido:     00:00:00.83
+Tiempo de CPU:         00:00:00.03

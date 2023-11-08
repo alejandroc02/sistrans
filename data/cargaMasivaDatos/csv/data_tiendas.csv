@@ -1,6 +1,6 @@
 id,tipo_tienda,servicios_tipo
-1,Alimentos,tienda
-2,Belleza,tienda
-3,Libros,tienda
-4,Alimentos,tienda
-5,Alimentos,tienda
+1,Belleza,tienda
+2,Libros,tienda
+3,Belleza,tienda
+4,Electronica,tienda
+5,Ropa,tienda
