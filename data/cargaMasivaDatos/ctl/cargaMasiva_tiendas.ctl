@@ -6,5 +6,5 @@ FIELDS TERMINATED BY ','
 (
     id,
     tipo_tienda,
-    servicios_tipo,
+    servicios_tipo
 )

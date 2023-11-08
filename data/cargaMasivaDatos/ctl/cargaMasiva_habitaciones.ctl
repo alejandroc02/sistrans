@@ -7,5 +7,5 @@ FIELDS TERMINATED BY ','
     id,
     capacidad,
     precio,
-    tipohab_id_tipo,
+    tipohab_id_tipo
 )

@@ -7,5 +7,5 @@ FIELDS TERMINATED BY ','
     habitacion_id,
     servicios_tipo,
     descripcion,
-    costo,
+    costo
 )

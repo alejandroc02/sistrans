@@ -5,5 +5,5 @@ APPEND INTO TABLE serv_conferencia
 FIELDS TERMINATED BY ','
 (
     reservaserv_id,
-    conferencia_id,
+    conferencia_id
 )

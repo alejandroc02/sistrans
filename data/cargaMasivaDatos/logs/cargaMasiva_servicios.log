@@ -1,85 +1,10 @@
 
-SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 01:25:45 2023
+SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 03:41:59 2023
 Version 21.3.0.0.0
 
 Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
 
-Archivo de Control:   data/cargaMasivaDatos/ctl/cargaMasiva_servicios.ctl
-Archivo de Datos:      data\cargaMasivaDatos\csv\data_servicios.csv
-  Archivo de Errores:     data/cargaMasivaDatos/ctl/data_servicios.bad
-  Desechar Archivo:  ninguno especificado
- 
- (Permitir todos los registros desechados)
-
-Número a cargar: ALL
-Número que omitir: 0
-Errores permitidos: 50
-Matriz de enlace:     250 filas, máximo de 1048576 bytes
-Continuación:    ninguno especificado
-Ruta de acceso utilizada:      Convencional
-
-Tabla SERVICIOS, cargada de cada registro lógico.
-Opción INSERT activa para esta tabla: APPEND
-
-   Nombre Columna                  Posición   Long  Term Entorno Tipo de Dato
------------------------------- ---------- ----- ---- ---- ---------------------
-TIPO                                FIRST     *   ,       CHARACTER            
-DESCRIPCION                          NEXT     *   ,       CHARACTER            
-
-Registro 1: Rechazado - Error en tabla SERVICIOS.
-ORA-02290: restricción de control (ISIS2304C15202320.CK_TIPO_SERVICIO) violada
-
-Registro 2: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-Registro 3: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-Registro 4: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-Registro 5: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-Registro 6: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-Registro 7: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-Registro 8: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-Registro 9: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-Registro 10: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-Registro 11: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-Registro 12: Rechazado - Error en tabla SERVICIOS.
-ORA-00001: restricción única (ISIS2304C15202320.SERVICIOS_PK) violada
-
-
-Tabla SERVICIOS:
-  0 Filas cargadas correctamente.
-  12 Filas no cargadas debido a errores de datos.
-  0 Filas no cargadas porque todas las cláusulas WHEN han fallado.
-  0 Filas no cargadas porque todos los campos eran nulos.
-
-
-Espacio asignado a matriz de enlace:           129000 bytes (250 filas)
-Bytes de buffer de lectura: 1048576
-
-Total de registros lógicos omitidos:          0
-Total de registros lógicos leídos:          12
-Total de registros lógicos rechazados:        12
-Total de registros lógicos desechados:        0
-
-La ejecución empezó en Mié Nov 08 01:25:45 2023
-La ejecución terminó en Mié Nov 08 01:25:46 2023
-
-Tiempo transcurrido:     00:00:00.76
-Tiempo de CPU:         00:00:00.01
+SQL*Loader-350: Error de sintaxis en la línea 9.
+Se espera nombre de campo, se ha encontrado ")".
+)
+^

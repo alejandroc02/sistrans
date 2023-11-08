@@ -11,5 +11,5 @@ FIELDS TERMINATED BY ','
     desc_reserva,
     desc_bar,
     desc_rest,
-    desc_servicio,
+    desc_servicio
 )

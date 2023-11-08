@@ -5,5 +5,5 @@ APPEND INTO TABLE servicios
 FIELDS TERMINATED BY ','
 (
     tipo,
-    descripcion,
+    descripcion
 )

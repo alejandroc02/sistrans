@@ -9,5 +9,5 @@ FIELDS TERMINATED BY ','
     capacidad,
     hora_inicio,
     hora_fin,
-    servicios_tipo,
+    servicios_tipo
 )

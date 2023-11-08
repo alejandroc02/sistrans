@@ -5,5 +5,5 @@ APPEND INTO TABLE ofrecen
 FIELDS TERMINATED BY ','
 (
     spas_id,
-    serviciosspa_id,
+    serviciosspa_id
 )

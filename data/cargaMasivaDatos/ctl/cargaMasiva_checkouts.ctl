@@ -6,5 +6,5 @@ FIELDS TERMINATED BY ','
 (
     reservas_id,
     habitacion_id,
-    fecha_salida,
+    fecha_salida
 )

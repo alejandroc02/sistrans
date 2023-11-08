@@ -6,5 +6,5 @@ FIELDS TERMINATED BY ','
 (
     reunion_id,
     equipos_id,
-    costo,
+    costo
 )

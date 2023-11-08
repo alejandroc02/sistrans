@@ -5,5 +5,5 @@ APPEND INTO TABLE reservan
 FIELDS TERMINATED BY ','
 (
     habitacion_id,
-    reservas_id,
+    reservas_id
 )

@@ -5,5 +5,5 @@ APPEND INTO TABLE prestan
 FIELDS TERMINATED BY ','
 (
     serviciosprestamo_id,
-    utensilios_id,
+    utensilios_id
 )

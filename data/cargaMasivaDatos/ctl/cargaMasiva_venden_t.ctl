@@ -5,5 +5,5 @@ APPEND INTO TABLE venden_t
 FIELDS TERMINATED BY ','
 (
     tiendas_id,
-    productost_id,
+    productost_id
 )

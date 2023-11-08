@@ -5,5 +5,5 @@ APPEND INTO TABLE venden_super
 FIELDS TERMINATED BY ','
 (
     supermercados_id,
-    productossuper_id,
+    productossuper_id
 )

@@ -7,5 +7,5 @@ FIELDS TERMINATED BY ','
     tipo_documento,
     num_documento,
     nombre,
-    correo,
+    correo
 )

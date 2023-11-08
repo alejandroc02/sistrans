@@ -7,5 +7,5 @@ FIELDS TERMINATED BY ','
     id,
     capacidad,
     estilo,
-    servicios_tipo,
+    servicios_tipo
 )
