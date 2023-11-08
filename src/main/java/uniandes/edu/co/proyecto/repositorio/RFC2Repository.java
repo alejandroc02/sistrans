@@ -9,7 +9,7 @@ import java.util.Collection;
 /*
     RFC2: MOSTRAR LOS 20 SERVICIOS MÁS POPULARES.
 */
-public interface RFC2Repository extends JpaRepository<RFC2Result, Integer> {
+public interface RFC2Repository extends JpaRepository<RFC2Result, String> {
 
     @Query(value = "SELECT servicios.tipo AS servicioTipo, COUNT(consumos.servicios_tipo) AS cantidadConsumos " +
             "FROM consumos " +

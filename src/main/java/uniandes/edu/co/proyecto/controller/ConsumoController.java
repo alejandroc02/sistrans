@@ -1,11 +1,14 @@
 package uniandes.edu.co.proyecto.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import uniandes.edu.co.proyecto.modelo.Consumos;
 import uniandes.edu.co.proyecto.repositorio.ConsumosRepository;
 
+
+@Controller
 public class ConsumoController {
 
     @Autowired

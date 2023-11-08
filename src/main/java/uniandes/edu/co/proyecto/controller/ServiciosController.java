@@ -1,6 +1,7 @@
 package uniandes.edu.co.proyecto.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import uniandes.edu.co.proyecto.modelo.Servicios;
@@ -8,6 +9,8 @@ import uniandes.edu.co.proyecto.repositorio.ServiciosRepository;
 
 import java.util.List;
 
+
+@Controller
 public class ServiciosController {
 
     @Autowired
