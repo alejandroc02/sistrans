@@ -5,5 +5,5 @@ APPEND INTO TABLE sirven_res
 FIELDS TERMINATED BY ','
 (
     restaurantes_id,
-    productosres_id
+    productosres_id,
 )

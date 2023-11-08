@@ -9,5 +9,5 @@ FIELDS TERMINATED BY ','
     fecha_salida,
     num_personas,
     planesconsumo_id,
-    usuarios_num_documento
+    usuarios_num_documento,
 )

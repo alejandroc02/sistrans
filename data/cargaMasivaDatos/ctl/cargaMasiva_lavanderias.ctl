@@ -8,5 +8,5 @@ FIELDS TERMINATED BY ','
     tipo_prenda,
     cantidad_prendas,
     costo,
-    servicios_tipo
+    servicios_tipo,
 )

@@ -6,5 +6,5 @@ FIELDS TERMINATED BY ','
 (
     reservas_id,
     clientes_num_documento,
-    fecha_ingreso
+    fecha_ingreso,
 )

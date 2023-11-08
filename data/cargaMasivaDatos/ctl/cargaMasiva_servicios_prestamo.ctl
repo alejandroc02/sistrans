@@ -7,5 +7,5 @@ FIELDS TERMINATED BY ','
     id,
     cantidad,
     devuelto,
-    servicios_tipo
+    servicios_tipo,
 )

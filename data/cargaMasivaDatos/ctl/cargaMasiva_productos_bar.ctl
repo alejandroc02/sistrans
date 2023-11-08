@@ -6,5 +6,5 @@ FIELDS TERMINATED BY ','
 (
     id,
     nombre,
-    precio
+    precio,
 )

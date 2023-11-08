@@ -5,5 +5,5 @@ APPEND INTO TABLE tipo_hab
 FIELDS TERMINATED BY ','
 (
     tipo,
-    id_tipo
+    id_tipo,
 )

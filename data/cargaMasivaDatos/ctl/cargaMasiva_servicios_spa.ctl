@@ -7,5 +7,5 @@ FIELDS TERMINATED BY ','
     id,
     nombre,
     costo,
-    duracion_min
+    duracion_min,
 )

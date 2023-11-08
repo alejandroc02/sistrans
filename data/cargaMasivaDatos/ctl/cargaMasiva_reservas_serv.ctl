@@ -8,5 +8,5 @@ FIELDS TERMINATED BY ','
     duracion_hora,
     dia,
     hora,
-    habitacion_id
+    habitacion_id,
 )

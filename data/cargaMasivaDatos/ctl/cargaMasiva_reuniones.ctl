@@ -7,5 +7,5 @@ FIELDS TERMINATED BY ','
     id,
     capacidad,
     costo_hora,
-    servicios_tipo
+    servicios_tipo,
 )
