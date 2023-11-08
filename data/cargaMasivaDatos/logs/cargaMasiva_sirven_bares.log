@@ -1,0 +1,55 @@
+
+SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 00:23:15 2023
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
+
+Archivo de Control:   data/cargaMasivaDatos/ctl/cargaMasiva_sirven_bares.ctl
+Archivo de Datos:      data\cargaMasivaDatos\csv\data_sirven_bares.csv
+  Archivo de Errores:     data/cargaMasivaDatos/ctl/data_sirven_bares.bad
+  Desechar Archivo:  ninguno especificado
+ 
+ (Permitir todos los registros desechados)
+
+Número a cargar: ALL
+Número que omitir: 0
+Errores permitidos: 50
+Matriz de enlace:     250 filas, máximo de 1048576 bytes
+Continuación:    ninguno especificado
+Ruta de acceso utilizada:      Convencional
+
+Tabla SIRVEN_BARES, cargada de cada registro lógico.
+Opción INSERT activa para esta tabla: APPEND
+
+   Nombre Columna                  Posición   Long  Term Entorno Tipo de Dato
+------------------------------ ---------- ----- ---- ---- ---------------------
+BARES_ID                            FIRST     *   ,       CHARACTER            
+PRODUCTOSBAR_ID                      NEXT     *   ,       CHARACTER            
+
+Registro 1: Rechazado - Error en tabla SIRVEN_BARES, columna BARES_ID.
+ORA-01722: número no válido
+
+Registro 5: Rechazado - Error en tabla SIRVEN_BARES.
+ORA-00001: restricción única (ISIS2304C15202320.SIRVEN_BARES_PK) violada
+
+
+Tabla SIRVEN_BARES:
+  9 Filas cargadas correctamente.
+  2 Filas no cargadas debido a errores de datos.
+  0 Filas no cargadas porque todas las cláusulas WHEN han fallado.
+  0 Filas no cargadas porque todos los campos eran nulos.
+
+
+Espacio asignado a matriz de enlace:           129000 bytes (250 filas)
+Bytes de buffer de lectura: 1048576
+
+Total de registros lógicos omitidos:          0
+Total de registros lógicos leídos:          11
+Total de registros lógicos rechazados:         2
+Total de registros lógicos desechados:        0
+
+La ejecución empezó en Mié Nov 08 00:23:15 2023
+La ejecución terminó en Mié Nov 08 00:23:16 2023
+
+Tiempo transcurrido:     00:00:00.70
+Tiempo de CPU:         00:00:00.04
