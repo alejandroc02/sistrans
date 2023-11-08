@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 00:56:23 2023
+SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 01:25:49 2023
 Version 21.3.0.0.0
 
 Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
@@ -199,8 +199,8 @@ Total de registros lógicos leídos:         100
 Total de registros lógicos rechazados:        51
 Total de registros lógicos desechados:        0
 
-La ejecución empezó en Mié Nov 08 00:56:23 2023
-La ejecución terminó en Mié Nov 08 00:56:26 2023
+La ejecución empezó en Mié Nov 08 01:25:49 2023
+La ejecución terminó en Mié Nov 08 01:25:51 2023
 
-Tiempo transcurrido:     00:00:02.84
-Tiempo de CPU:         00:00:00.05
+Tiempo transcurrido:     00:00:02.26
+Tiempo de CPU:         00:00:00.03

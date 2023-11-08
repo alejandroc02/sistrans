@@ -50,7 +50,7 @@ def generar_datos_bares():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for id in range(1, 75001):  # Genera 75,000 registros
+        for id in range(1, 7500):  # Genera 75,000 registros
             capacidad = random.randint(capacidad_min, capacidad_max)
             estilo = random.choice(estilos)
             servicios_tipo = random.choice(servicios_tipo_bares)
@@ -117,7 +117,7 @@ def generar_datos_conferencias():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for id in range(1, 100):  # Genera 750,000 registros
+        for id in range(1, 5):  # Genera 750,000 registros
             capacidad = random.randint(capacidad_min, capacidad_max)
             costo_hora = round(random.uniform(costo_min, costo_max), 2)
             servicios_tipo = 'salon'
@@ -470,8 +470,8 @@ def generar_datos_reuniones():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for id in range(1, 100):  # Genera 750,000 registros
-            capacidad = random.randint(1, 100)
+        for id in range(1, 5):  # Genera 750,000 registros
+            capacidad = random.randint(1, 12)
             costo_hora = round(random.uniform(50.0, 200.0), 2)
             servicios_tipo = 'salon'
             writer.writerow({'id': id, 'capacidad': capacidad, 'costo_hora': costo_hora, 'servicios_tipo': servicios_tipo})

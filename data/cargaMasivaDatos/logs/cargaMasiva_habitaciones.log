@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 00:56:13 2023
+SQL*Loader: Release 21.0.0.0.0 - Production on Mié Nov 8 01:25:40 2023
 Version 21.3.0.0.0
 
 Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
@@ -44,7 +44,7 @@ Registro 5: Rechazado - Error en tabla HABITACIONES.
 ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 6: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 7: Rechazado - Error en tabla HABITACIONES.
 ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
@@ -65,7 +65,7 @@ Registro 12: Rechazado - Error en tabla HABITACIONES.
 ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 13: Rechazado - Error en tabla HABITACIONES.
-ORA-02291: restricción de integridad (ISIS2304C15202320.HABITACION_TIPOHAB_FK) violada - clave principal no encontrada
+ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
 
 Registro 14: Rechazado - Error en tabla HABITACIONES.
 ORA-00001: restricción única (ISIS2304C15202320.HABITACIONES_PK) violada
@@ -199,8 +199,8 @@ Total de registros lógicos leídos:         100
 Total de registros lógicos rechazados:        51
 Total de registros lógicos desechados:        0
 
-La ejecución empezó en Mié Nov 08 00:56:13 2023
-La ejecución terminó en Mié Nov 08 00:56:15 2023
+La ejecución empezó en Mié Nov 08 01:25:40 2023
+La ejecución terminó en Mié Nov 08 01:25:42 2023
 
-Tiempo transcurrido:     00:00:01.92
-Tiempo de CPU:         00:00:00.08
+Tiempo transcurrido:     00:00:01.74
+Tiempo de CPU:         00:00:00.03
