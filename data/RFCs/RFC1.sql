@@ -1,4 +1,4 @@
---RFC1 - MOSTRAR EL DINERO RECOLECTADO POR SERVICIOS EN CADA HABITACI�N EN EL �LTIMO A�O CORRIDO(2023).
+--RFC1 - MOSTRAR EL DINERO RECOLECTADO POR SERVICIOS EN CADA HABITACION EN EL ULTIMO AÑO CORRIDO(2023).
 SELECT habitaciones.id as habitacion_id , servicios.tipo as servicio, SUM(consumos.costo)dinero_recolectado 
 FROM consumos
 INNER JOIN habitaciones ON consumos.habitacion_id = habitaciones.id
