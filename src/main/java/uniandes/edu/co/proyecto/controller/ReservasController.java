@@ -1,11 +1,13 @@
 package uniandes.edu.co.proyecto.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import uniandes.edu.co.proyecto.modelo.Reservas;
 import uniandes.edu.co.proyecto.repositorio.ReservasRepository;
 
+@Controller
 public class ReservasController {
 
     @Autowired
@@ -13,7 +15,7 @@ public class ReservasController {
 
     @GetMapping("/reservas")
     public String reservas(Model model) {
-        model.addAttribute("Reservas", reservasRepository.darReservas());
+        model.addAttribute("reservas", reservasRepository.darReservas());
         return "reservas"; // Este es un placeholder
     }
 
